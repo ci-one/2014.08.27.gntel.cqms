@@ -1,8 +1,8 @@
 @import "var";
 
 .btn-style{
-  //  .btn-default(@btn-bg-color,@btn-border-color);
-.btn-st1
+ .btn-base(@btn-bg-color,@btn-border-color);
+//.btn-st1
 }
 
 
@@ -283,25 +283,20 @@ table > tbody > tr > td {
   }
 
 .btn-st1{
-  .btn-default(@btn-bg-color,@btn-border-color);
+  .btn-base(@btn-bg-color,@btn-border-color);
   border: 1px solid darken(@btn-bg-color,20%);
-  :hover{
-    color: white;
-
-  }
 }
 
 
-.btn-default(@bgcolor:darkred, @bodercolor :#ac2925) {
+.btn-base(@bgcolor:darkred, @bodercolor :#ac2925) {
   color: white;
   background-color: @bgcolor;
-  border: 5px outset @bodercolor;
+  border: 3px outset @bodercolor;
+  &:hover{
+    color: white;
+    border: 3px inset @btn-border-color;
+  }
 }
-.btn-default:hover{
-  color: white;
-  border: 5px inset @btn-border-color;
-}
-
 .pagenation-remove-margin {
   margin: 0;
 }
