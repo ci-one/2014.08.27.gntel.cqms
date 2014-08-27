@@ -61,7 +61,7 @@ angular.module('gntelCqmsApp')
                 }
             }
 
-            console.log($scope.orderby);
+            //console.log($scope.orderby);
         };
 
         // order by를 위한 함수
@@ -91,6 +91,8 @@ angular.module('gntelCqmsApp')
                 , memberid:$scope.search.memberid
                 , start:$scope.search.start.replace(/-/g,'')
                 , end:$scope.search.end.replace(/-/g,'')};
+
+            console.log(searchKeyword);
 
             dbUserAccess.getList(searchKeyword)
                 .then(function (result) {
@@ -175,5 +177,5 @@ angular.module('gntelCqmsApp')
 
         $scope.trySearch = function() {
             $scope.getlist();
-        }
+        };
     });
