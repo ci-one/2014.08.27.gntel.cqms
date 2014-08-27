@@ -27,34 +27,34 @@ angular.module('gntelCqmsApp', [
 
             //추가:김선규
             .when('/priodic', {
-                templateUrl: 'views/contents/052_S_quality_check_priodic.html'
+                templateUrl: 'views/contents/052_S_2310_check.priodic.html'
             })
             .when('/priodic/result', {
-                templateUrl: 'views/contents/052_S_quality_check_probe_plcy_info.html'
+                templateUrl: 'views/contents/052_S_2311_check.probe.plcy.info.html'
             })
             .when('/priodic/plcy', {
-                templateUrl: 'views/contents/052_S_quality_check_rule_plcy_list.html'
+                templateUrl: 'views/contents/052_S_2312_check.rule.plcy.list.html'
             })
             .when('/demand', {
-                templateUrl: 'views/contents/052_S_quality_check_demand.html'
+                templateUrl: 'views/contents/052_S_2320_check.demand.html'
             })
             .when('/demand/process', {
-                templateUrl: 'views/contents/052_S_quality_check_demand_process.html'
+                templateUrl: 'views/contents/052_S_2321_check.demand.process.html'
             })
             .when('/demand/result', {
-                templateUrl: 'views/contents/052_S_quality_check_demand_result.html'
+                templateUrl: 'views/contents/052_S_2322_check.demand.result.html'
             })
             .when('/current', {
-                templateUrl: 'views/contents/052_S_quality_check_current_list.html'
+                templateUrl: 'views/contents/052_S_2400_check.current.list.html'
             })
             .when('/current/plcy', {
-                templateUrl: 'views/contents/052_S_quality_check_current_plcy_info.html'
+                templateUrl: 'views/contents/052_S_2410_check.current.plcy.info.html'
             })
             .when('/priodicR', {
-                templateUrl: 'views/contents/052_S_quality_result_priodic.html'
+                templateUrl: 'views/contents/052_S_2520_result.priodic.html'
             })
             .when('/priodicavg', {
-                templateUrl: 'views/contents/052_S_quality_result_priodic_avg_list.html'
+                templateUrl: 'views/contents/052_S_2530_result.priodic.avg.list.html'
             })
             //종료:김선규
 
