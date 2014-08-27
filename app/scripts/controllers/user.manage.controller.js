@@ -10,6 +10,9 @@ angular.module('gntelCqmsApp')
         $scope.filterState = '';
         $scope.currentPage = 0;
 
+        // for calendar
+        $scope.showCal = false;
+
         // 중복 로딩 방지
         var isInitializing = false;
 
@@ -85,7 +88,7 @@ angular.module('gntelCqmsApp')
     })
     .controller('userManageListCtrl', function ($scope, dbUserManage) {
 
-        $scope.search = {'memberid': 'a'};
+        $scope.search = {org:'', dutyname:'', memberid:'',mobile:'', joindate:''};
 
         $scope.itemsPerPage = 5;
         $scope.filterItems = [];
@@ -95,16 +98,12 @@ angular.module('gntelCqmsApp')
             $scope.$emit("user:selected", selected);
         };
 
-        $scope.$on('resetPage', function (event, _n) {
-            $scope.setPage(_n);
-        });
+        $scope.getlist = function () {
 
-        $scope.$on('reload:list', function (event) {
-            getlist();
-        });
+            $scope.search.joindatef = $scope.search.joindate.replace(/-/g,'');
+            console.log($scope.search);
 
-        var getlist = function () {
-            dbUserManage.getList()
+            dbUserManage.getList($scope.search)
                 .then(function (result) {
                     $scope.items = result;
                 })
@@ -184,7 +183,20 @@ angular.module('gntelCqmsApp')
                     $scope.setPage = function (_n) {
                         $scope.currentPage = _n;
                     };
+
+                    $scope.$on('resetPage', function (event, _n) {
+                        $scope.setPage(_n);
+                    });
+
+                    $scope.$on('reload:list', function (event) {
+                        $scope.getlist();
+                    });
                 });
         };
-        getlist();
+        $scope.getlist();
+
+        $scope.trySearch = function() {
+            $scope.getlist();
+        };
+
     });

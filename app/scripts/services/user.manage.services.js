@@ -8,12 +8,13 @@ angular.module('gntelCqmsApp')
         var dbUserManage = {};
 
         // 리스트
-        dbUserManage.getList = function () {
+        dbUserManage.getList = function (obj) {
             var deferred = $q.defer();
 
             $http({
                     method: 'post',
-                    url: '/dbUserManage/getList'
+                    url: '/dbUserManage/getList',
+                    data: obj
                 }
             ).success(function (data) {
                     deferred.resolve(data.sending);

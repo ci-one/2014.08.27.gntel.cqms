@@ -18,6 +18,12 @@ angular.module('gntelCqmsApp', [
             .when('/quality/weather_chart', {
                 templateUrl: 'views/contents/052_S_2100_quality.weather_chart.html'
             })
+            .when('/probe/list', {
+                templateUrl: 'views/contents/052_S_2110_probe.list.html'
+            })
+            .when('/probe/plcy_list', {
+                templateUrl: 'views/contents/052_S_2210_probe.plcy.list.html'
+            })
             .when('/admin/user', {
                 templateUrl: 'views/contents/052_S_3100_admin.user.html'
             })

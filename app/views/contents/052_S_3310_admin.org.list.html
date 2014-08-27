@@ -5,7 +5,7 @@
         <table class="table tb-list table-bordered list-option">
             <thead class="list-option">
             <tr class="list-header-option">
-                <th class="text-center">전체선택</th>
+                <th class="text-center"><a href="" ng-click="allClick();">전체선택</a></th>
                 <th class="text-center">이용기관ID</th>
                 <th class="text-center">이용기관명</th>
                 <th class="text-center">담당자명</th>
@@ -14,15 +14,18 @@
             </tr>
             </thead>
             <tbody class="text-center list-contents-option">
-            <!-- filter:{'useyn':'N'} -->
-            <tr ng-repeat="item in filterItems = (items | filter:{code:search.code} | filter:{value:search.value})"
+            <!-- filter:{'useyn':'N'} -> filter:{'state':filterState}:(filterState==''?false:true) -->
+            <tr ng-repeat="item in filterItems = (items | filter:{useyn:filterState})"
                 ng-if="currentPage*itemsPerPage <= $index && $index < (currentPage+1)*itemsPerPage">
-                <td><input type="checkbox" ng-model="check[$index]"></td>
-                <td>{{item['code']}}</td>
-                <td>{{item['value']}}</td>
-                <td>{{item['managertel']}}</td>
-                <td>{{item['managername']}}</td>
-                <td>{{item['useyn']=='Y'?'사용함':'사용안함'}}</td>
+                <td><input type="checkbox" ng-model="items[$index]['check']"></td>
+                <td><a href="" ng-click="process(item)">{{item['code']}}</a></td>
+                <td><a href="" ng-click="process(item)">{{item['value']}}</a></td>
+                <td><a href="" ng-click="process(item)">{{item['managername']}}</a></td>
+                <td><a href="" ng-click="process(item)">{{item['managertel']}}</a></td>
+                <td><a href="" ng-click="process(item)">{{item['useyn']=='Y'?'사용함':'사용안함'}}</a></td>
+            </tr>
+            <tr ng-if="filterItems.length == 0">
+                <td colspan="6">조회된 데이터가 없습니다.</td>
             </tr>
             </tbody>
         </table>

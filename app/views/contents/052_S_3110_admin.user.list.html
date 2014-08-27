@@ -54,11 +54,18 @@
                 <th>
                     가입날짜
                     <div class="input-group input-group-sm input-group-search" searchType="joindate">
+
+                        <!-- calendar popup -->
+                        <div ng-if="showCal" ng-include="'views/partials/sidebar/calendar.html'"
+                             style="position: absolute; top: 24px; left: 100px;"></div>
+
+                        <!-- search input -->
                         <input type="text" class="form-control" ng-model="search.joindate">
 
+                        <!-- button -->
                         <span class="input-group-btn">
                             <button class="btn btn-default input-group-btn-custom"
-                                    type="button" ng-click="popupCalendar()" btnType="glyphicon">
+                                    type="button" ng-click="showCal = !showCal;" btnType="glyphicon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </button>
                             <button class="btn btn-default input-group-btn-custom" type="button" ng-click="trySearch()" btnType="glyphicon">

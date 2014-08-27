@@ -1,4 +1,84 @@
+<link rel="stylesheet" href="styles/layout/contents.css">
 
-<div>
-    quality chart
+<div ng-controller="userManageCtrl" class="contents-layout">
+
+    <!-- title ▼ -->
+    <div class="title-option">
+        　　　품질기상도
+    </div>
+    <!-- title ▲ -->
+
+    <!-- contents ▼ -->
+    <div class="contents-background">
+
+        <!-- search ▼ -->
+        <table class="table tb-list remove-margin contents-center">
+            <tbody>
+            <tr>
+                <th class="active">
+                    이용기관명
+                </th>
+                <td>
+                    <select ng-options="">
+                        <option value="all">전체선택</option>
+                    </select>
+                </td>
+                <th class="active">
+                    집계범위(시간대)
+                </th>
+                <td>
+                    {{'00:00'}} ~ {{'23:00'}}
+                </td>
+            </tr>
+            <tr>
+                <th class="active">
+                    기간별
+                </th>
+                <td colspan="3">
+                    <input type="radio">일일
+                    <input type="radio">주간
+                    <input type="radio">월간
+                    <input type="radio">기간선택
+                    <span class="input-group input-group-sm input-group-search" searchType="joindate">
+
+                        <!-- calendar popup -->
+                        <div ng-if="showCal1" ng-include="'views/partials/sidebar/calendar.html'"
+                             style="position: absolute; top: 24px; left: 100px;"></div>
+
+                        <!-- search input -->
+                        <input type="text" class="form-control" ng-model="search.joindate">
+
+                        <!-- button -->
+                        <span class="input-group-btn">
+                            <button class="btn btn-default input-group-btn-custom"
+                                    type="button" ng-click="showCal1 = !showCal1;" btnType="glyphicon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </button>
+                        </span>
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- search ▲ -->
+
+        <!-- icon info ▼ -->
+        <div class="row clearfix">
+            icon info
+        </div>
+        <!-- icon info ▲ -->
+
+        <div class="row clearfix">
+            <div class="pull-right">
+                <button type="button" class="btn btn-red" ng-click="">기준 값 설정
+                </button>
+            </div>
+        </div>
+
+        <!-- list ▼ -->
+        <div ng-include="'views/contents/052_S_2110_quality.weather.chart.list.html'"></div>
+        <!-- list ▲ -->
+    </div>
+
+    <!-- contents ▲ -->
 </div>
