@@ -23,10 +23,11 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/layout/contents.css">
+    <link rel="stylesheet" href="styles/layout/login.css">
     <!-- endbuild -->
 </head>
 <body ng-app="gntelCqmsApp" ng-controller="MainCtrl">
-<link rel="stylesheet" href="styles/layout/login.css">
+
 
 <div class="login-add center-block" style="margin-top:15px;">
 <div class="col-md-12">
@@ -89,12 +90,33 @@
                 <option>선택</option>
                 <option>010</option>
                 <option>011</option>
-            </select>-<input type="text" /> - <input type="text" /> </td>
+            </select> - <input type="text" class="input-sm"  /> - <input type="text"  class="input-sm" /> </td>
         </tr>
-
+        <tr>
+            <th class="list-header-option">E-mail <strong class="text-danger">*</strong></th>
+            <td> <input type="EMAIL"  class="input-sm"/> @ <input type="EMAIL"  class="input-sm"/>
+                <select class="input-sm">
+                <option>직접입력</option>
+                <option>naver.com</option>
+                <option>nate.com</option>
+                    <option>daum.net</option>
+                    <option>paran.com</option>
+                    <option>yahoo.co.kr</option>
+                    <option>empal.com</option>
+                    <option>hanmir.com</option>
+                    <option>hotmail.com</option>
+                    <option>korea.com</option>
+            </select></td>
+        </tr>
         </tbody>
     </table>
        </div>
+
+    <div class="col-md-12" style="margin-top: 15px;">
+        <div class="pull-right">
+        <button class="btn btn-style"><span class="glyphicon glyphicon-ok" ></span> 확인 </button> <button class="btn btn-style" style="margin-left:10px; background:#a2a2a2;"> 취소 </button>
+        </div>
+        </div>
 </div>
 </div>
 
