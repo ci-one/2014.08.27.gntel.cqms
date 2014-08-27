@@ -199,7 +199,6 @@
 </div>
 
 
-
 <!-- title ▼ -->
 <div class="title-option">
     　　　PROBE 품질정책현황 추가
@@ -223,7 +222,8 @@
             <tr>
                 <th class="list-header-option">시작일</th>
                 <td>
-                    <div class="input-group input-group-sm input-group-search" style="margin:0 !important;" searchType="joindate">
+                    <div class="input-group input-group-sm input-group-search" style="margin:0 !important;"
+                         searchType="joindate">
 
                         <!-- calendar popup -->
                         <div ng-if="showCal" ng-include="'views/partials/sidebar/calendar.html'"
@@ -243,7 +243,8 @@
                 </td>
                 <th class="list-header-option">종료일</th>
                 <td>
-                    <div class="input-group input-group-sm input-group-search" style="margin:0 !important;" searchType="joindate">
+                    <div class="input-group input-group-sm input-group-search" style="margin:0 !important;"
+                         searchType="joindate">
                         <!-- calendar popup -->
                         <div ng-if="showCal" ng-include="'views/partials/sidebar/calendar.html'"
                              style="position: absolute; top: 24px; left: 100px;"></div>
@@ -309,12 +310,42 @@
                     <select>
                         <option value="" selected>사용함</option>
                         <option value="">사용 안함</option>
-                        </select>
+                    </select>
                 </td>
             </tr>
             <tr>
-                <td colspan="4" style="text-align:right">기본 설정<a href="#/probe/setting" target="_blank">기본값</a></td>
+                <td colspan="4" style="text-align:right">
+                    <button type="button" class="btn btn-style">
+                        기본값으로
+                    </button>
+                    <button type="button" class="btn btn-style"
+                            onclick="window.open('views/contents/052_S_2221_probe.plcy.setting.default.html'
+                        , 'openRValue'
+                        , 'width=800, height=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes')">
+                        기본값 설정
+                    </button>
+                    <button type="button" class="btn btn-style">
+                        확인
+                    </button>
             </tr>
             </tbody>
         </table>
     </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
+    </body>
+    </html>
