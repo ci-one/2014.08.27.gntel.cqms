@@ -5,7 +5,9 @@
 
 angular.module('gntelCqmsApp')
     .controller('userManageCtrl', function ($scope, dbCode, dbUserManage, $route) {
-
+        $scope.change = function (item){
+            $scope.click =item
+        }
         $scope.selectedItem = null;
         $scope.filterState = '';
         $scope.currentPage = 0;
@@ -27,7 +29,7 @@ angular.module('gntelCqmsApp')
                     function (result) {
                         $scope.statusList = result;
                         isInitializing = false;
-                        if($scope.statusList.length > 0)
+                        if ($scope.statusList.length > 0)
                             $scope.tab_click($scope.statusList[0]['value']);
                     },
                     function (error) {
@@ -65,9 +67,9 @@ angular.module('gntelCqmsApp')
         $scope.saveState = function () {
             var state = '';
 
-            for(var stat in $scope.statusList) {
+            for (var stat in $scope.statusList) {
                 var statData = $scope.statusList[stat];
-                if(statData['value'] == $scope.afterState) {
+                if (statData['value'] == $scope.afterState) {
                     state = statData['code'];
                     break;
                 }
@@ -88,7 +90,7 @@ angular.module('gntelCqmsApp')
     })
     .controller('userManageListCtrl', function ($scope, dbUserManage) {
 
-        $scope.search = {org:'', dutyname:'', memberid:'',mobile:'', joindate:''};
+        $scope.search = {org: '', dutyname: '', memberid: '', mobile: '', joindate: ''};
 
         $scope.itemsPerPage = 5;
         $scope.filterItems = [];
@@ -100,7 +102,7 @@ angular.module('gntelCqmsApp')
 
         $scope.getlist = function () {
 
-            $scope.search.joindatef = $scope.search.joindate.replace(/-/g,'');
+            $scope.search.joindatef = $scope.search.joindate.replace(/-/g, '');
             console.log($scope.search);
 
             dbUserManage.getList($scope.search)
@@ -195,7 +197,7 @@ angular.module('gntelCqmsApp')
         };
         $scope.getlist();
 
-        $scope.trySearch = function() {
+        $scope.trySearch = function () {
             $scope.getlist();
         };
 
