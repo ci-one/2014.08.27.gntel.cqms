@@ -4,7 +4,7 @@
 
     <!-- title ▼ -->
     <div class="title-option">
-        　　　품질기상도
+        　　　ON-DEMAND
     </div>
     <!-- title ▲ -->
 
@@ -12,136 +12,97 @@
     <div class="contents-background">
 
         <!-- search ▼ -->
-        <table class="table tb-list remove-margin contents-center">
+        <table class="table tb-list remove-margin">
             <tbody>
             <tr>
                 <th class="list-header-option text-center" style="padding: 15px 0">
-                    이용기관명
+                    안내
                 </th>
-                <td>
-                    <select ng-options="" class="form-control">
-                        <option value="all">전체선택</option>
-                    </select>
-                </td>
-                <th class="list-header-option text-center" style="padding: 15px 0">
-                    집계범위(시간대)
-                </th>
-                <td style="padding: 15px 0">
-                    {{'00:00'}} ~ {{'23:00'}}
-                </td>
             </tr>
             <tr>
-                <th class="list-header-option text-center" style="padding: 15px 0">
-                    기간별
-                </th>
-                <td colspan="3">
-                    <div class="row clearfix remove-margin">
-                        <div style="float:left;">
-                            <input type="radio">일일　
-                            <input type="radio">주간　
-                            <input type="radio">월간　
-                            <input type="radio">기간선택　
-                        </div>
-                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left">
-                            <!-- calendar popup -->
-                            <div ng-if="showCal1" ng-include="'views/partials/sidebar/calendar.html'"
-                                 style="position: absolute; top: 24px; left: 100px;"></div>
-
-                            <!-- search input -->
-                            <input type="text" class="form-control" ng-model="search.joindate">
-
-                            <!-- button -->
-                        <span class="input-group-btn">
-                            <button class="btn btn-default input-group-btn-custom"
-                                    type="button" ng-click="showCal1 = !showCal1;" btnType="glyphicon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </button>
-                        </span>
-                        </div>
-                        <span style="float:left">　~　</span>
-                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left">
-                            <!-- calendar popup -->
-                            <div ng-if="showCal2" ng-include="'views/partials/sidebar/calendar.html'"
-                                 style="position: absolute; top: 24px; left: 100px;"></div>
-
-                            <!-- search input -->
-                            <input type="text" class="form-control" ng-model="search.joindate">
-
-                            <!-- button -->
-                        <span class="input-group-btn">
-                            <button class="btn btn-default input-group-btn-custom"
-                                    type="button" ng-click="showCal2 = !showCal2;" btnType="glyphicon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </button>
-                        </span>
-                        </div>
-                    </div>
+                <td>
+                    측정을 진행중입니다.<br>
+                    측정이 완료되지 않았을 때 측정을 중지할 경우 측정 내용이 저장되지 않습니다.<br>
+                    측정시간은 송신자 PROBE의 설정에 의해 측정되지만, 측정 진행 시간과 실제 측정(PROBE) 시간은 상이할 수 있습니다.<br>
+                    　<br>
+                    음성품질측정 결과와 실제 체감 품질은 다를 수 있습니다.<br>
                 </td>
             </tr>
             </tbody>
         </table>
         <!-- search ▲ -->
-
+        <p></p>
         <!-- icon info ▼ -->
-        <div class="row clearfix" style="margin-top: 15px;">
-            <table class="table tb-list remove-margin text-center">
-                <tbody>
-                <tr>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-01.png" style="width:25px" alt="best"/>
-                        <br/>
-                        매우좋음
-                    </th>
-                    <td>{{'90'}}≤R값</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-02.png" style="width:25px" alt="good"/>
-                        <br/>
-                        좋음
-                    </th>
-                    <td>{{'80'}}≤R값＜{{'90'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-05.png" style="width:25px" alt="soso"/>
-                        <br/>
-                        보통
-                    </th>
-                    <td>{{'70'}}≤R값＜{{'80'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-07.png" style="width:25px" alt="bad"/>
-                        <br/>
-                        나쁨
-                    </th>
-                    <td>{{'60'}}≤R값＜{{'70'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-09.png" style="width:25px" alt="worst"/>
-                        <br/>
-                        매우나쁨
-                    </th>
-                    <td>R값＜{{'60'}}</td>
-                </tr>
-                <tr>
-                    <td>{{'4.34'}}≤MOS</td>
-                    <td>{{'4.03'}}≤MOS＜{{'4.34'}}</td>
-                    <td>{{'3.60'}}≤MOS＜{{'4.03'}}</td>
-                    <td>{{'3.10'}}≤MOS＜{{'3.60'}}</td>
-                    <td>MOS＜{{'3.10'}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        <table class="table tb-list remove-margin text-center">
+            <tbody>
+            <tr>
+                <th class="list-header-option text-center" style="padding: 15px 0">
+                    진행상태
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    측정 진행 중 입니다. 잠시만 기다려 주십시오.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 style="color:red">3</h2>
+                </td>
+            </tr>
+            </tbody>
+        </table>
         <!-- icon info ▲ -->
 
+        <p></p>
+        <!-- icon info ▼ -->
+        <table class="table tb-list remove-margin text-center">
+            <tbody>
+            <tr>
+                <th class="list-header-option text-center" style="padding: 15px 0" colspan="4">
+                    측정정보
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    측정 시작 일시
+                </th>
+                <td>
+                    2014년 8월 11일 14시 38분 38초
+                </td>
+                <th>
+                    측정 통화시간
+                </th>
+                <td>
+                    30 초
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    측정 구간(송신지**수신지)
+                </th>
+                <td colspan="3">
+                    대림산업[수송동](123456) ** 4324561 [김포도시철도3공구현장](123456)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    측정자 이름
+                </th>
+                <td colspan="3">
+                    운영자
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p></p>
+
         <div class="row clearfix">
-            <div class="pull-right">
-                <button type="button" class="btn btn-style" style="margin: 15px 15px;" ng-click="">기준 값 설정
-                </button>
-                <button type="button" class="btn btn-style" ng-click="">R등급 확인
+            <div class="contents-center">
+                <button type="button" class="btn btn-style" ng-click="">중지
                 </button>
             </div>
         </div>
-
-        <!-- list ▼ -->
-        <div ng-include="'views/contents/052_S_2110_quality.weather.chart.list.html'"></div>
-        <!-- list ▲ -->
     </div>
 
     <!-- contents ▲ -->
