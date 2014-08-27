@@ -1,3 +1,5 @@
+/*test*/
+/*test*/
 /*//기본컨셉
 //사이드 메뉴 색상
 @side-top-color :#e3dddd;
@@ -37,8 +39,6 @@
 @th-bot-color : @blue;  // 밑줄 색상
 @th-font:@grey;
 
-
-
 //버튼  색상
 
 @btn-bg-color: @blue1;
@@ -71,3 +71,5 @@
 
 @sub-title:@olive;
 */
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

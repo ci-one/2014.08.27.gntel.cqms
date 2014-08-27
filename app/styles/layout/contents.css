@@ -1,3 +1,5 @@
+/*test*/
+/*test*/
 /*//기본컨셉
 //사이드 메뉴 색상
 @side-top-color :#e3dddd;
@@ -37,8 +39,6 @@
 @th-bot-color : @blue;  // 밑줄 색상
 @th-font:@grey;
 
-
-
 //버튼  색상
 
 @btn-bg-color: @blue1;
@@ -73,12 +73,12 @@
 */
 .btn-style {
   color: white;
-  background-color: #47a447;
-  border: 5px outset #388038;
-  border: 1px solid #285d28;
+  background-color: #6a1111;
+  border: 5px outset #3e0a0a;
 }
 .btn-style:hover {
   color: white;
+  border: 5px inset #3e0a0a;
 }
 div > .contents {
   font-size: 12px;
@@ -111,7 +111,7 @@ div > .contents-center {
   font-weight: 700;
   padding: 0.1em;
   padding-bottom: 0.8em;
-  background-image: url("../../images/layout/title-bg-basic.png");
+  background-image: url("../../images/layout/title-bg.png");
   background-size: 100% 100%;
   z-index: 1000;
 }
@@ -122,7 +122,7 @@ div > .contents-center {
   color: white;
   font-size: 14px;
   font-weight: 700;
-  background-color: #456770;
+  background-color: #8a0e0e;
   border-radius: 7px;
   width: 290px;
   height: 26px;
@@ -193,7 +193,7 @@ table > tbody > tr > td {
 .list-option > thead > tr > th {
   text-align: center;
   line-height: 25px;
-  border-bottom: solid 2px #456770;
+  border-bottom: solid 2px #6a1111;
   position: relative;
 }
 .list-option > thead > tr > th > div.popup {
@@ -211,8 +211,8 @@ table > tbody > tr > td {
   text-decoration: none !important;
 }
 .list-header-option {
-  color: #222222;
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: #6f6f6f;
 }
 .list-contents-option {
   color: black;
@@ -274,7 +274,7 @@ table > tbody > tr > td {
   height: 100%;
 }
 .pn-sub2 {
-  width: 310px;
+  width: 254px;
   height: 353px;
   padding: 145px 20px;
 }
@@ -297,14 +297,14 @@ table > tbody > tr > td {
 }
 .btn-st1 {
   color: white;
-  background-color: #47a447;
-  border: 5px outset #388038;
-  border: 1px solid #285d28;
+  background-color: #6a1111;
+  border: 5px outset #3e0a0a;
+  border: 1px solid #120303;
 }
 .btn-st1:hover {
   color: white;
+  border: 5px inset #3e0a0a;
 }
-
 .pagenation-remove-margin {
   margin: 0;
 }
