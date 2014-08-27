@@ -3,7 +3,7 @@
 <div class="contents-layout" ng-controller="">
     <!-- title ▼ -->
     <div class="title-option">
-        　　　PROBE 이력
+        　　　품질정책 이력
     </div>
     <!-- title ▲ -->
 
@@ -14,16 +14,13 @@
         <div>
             <table class="table tb-list remove-margin contents-center">
                 <tbody>
-                <tr >
-                    <th class="list-header-option">이용기관명</th>
-                    <td colspan="4"><input type="text" ng-model="search.dutyname" maxlength="20" style="width: 100%;"></td>
-                </tr>
-
                 <tr>
-                    <th class="list-header-option">PROBE 전화번호</th>
+                    <th class="list-header-option"> ▶ 정책 ID</th>
                     <td><input type="text" ng-model="search.memberid" style="width: 100%;"></td>
 
-                    <th class="list-header-option">PROBE 이름</th>
+                    <th class="list-header-option"> ▶ 작업 내역</th>
+                    <td><input type="text" ng-model="search.start" style="width: 100%;"></td>
+                    <th class="list-header-option"> ▶ 작업자 ID</th>
                     <td><input type="text" ng-model="search.start" style="width: 100%;"></td>
                     <td class="list-header-option">
                         <button class="btn btn-option">검색</button>
@@ -43,251 +40,270 @@
 
         <!-- list ▼ -->
         <div style="overflow: auto;">
-        <div style="margin-top:15px; z-index: 1025; width: 2500px;">
+        <div style="margin-top:15px; z-index: 1025; width: 1500px;">
             <table class="table tb-list table-bordered list-option">
                 <thead>
                 <tr class="list-header-option">
                     <th>
-                        <!-- <a href="" ng-click="toggleOrder('name')">
-                             선택 {{orderbyDesc['dutyname']?'▼':'▲'}}
-                         </a>-->
                         작업 내역
                     </th>
                     <th>
-                        <!-- <a href="" ng-click="toggleOrder('id')">
-                                정책ID {{orderbyDesc['memberid']?'▼':'▲'}}
-                            </a>-->
-                        전화번호
+                        정책코드(ID)
                     </th>
                     <th>
-                        외부전화<br>
-                        호출번호
+                        정책시작일시
                     </th>
                     <th>
-                        PROBE 명
-                    </th>
-                    <th>
-                        이용기관명
-                    </th>
-                    <th>
-                        담당자명
-                    </th>
-
-                    <th>
-                        오디오샘플
-                    </th>
-
-                    <th>
-                        코덱유형
-                    </th>
-
-                    <th>
-                        미디어 <br>
-                        암호화여부
-                    </th>
-
-                    <th>
-                        시그널 <br>암호화 여부
-                    </th>
-
-                    <th>
-                        암호화 <br>알고리즘
+                        정책종료일시
                     </th>
                     <th>
                         측정통화시간
                     </th>
                     <th>
-                        로그 적재 ID
+                        측정주기
                     </th>
+
                     <th>
-                        로그 적재 일시
+                        측정횟수
                     </th>
+
+                    <th>
+                        수신자메일
+                    </th>
+
+                    <th>
+                        로그 적재자 ID
+                    </th>
+
+                    <th>
+                        로그 적재일
+                    </th>
+
+
                 </tr>
                 </thead>
                 <tbody class="text-center list-contents-option">
-                <tr ng-repeat="item in filterItems= (items | orderBy:ordering())"
-                    ng-if="currentPage*itemsPerPage <= $index && $index < (currentPage+1)*itemsPerPage">
+                <tr>
                     <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
                     <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
                     <td>admin</td>
                     <td>2014-08-26 10:56:14</td>
                 </tr>
                 <tr>
                     <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
                     <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
                     <td>admin</td>
                     <td>2014-08-26 10:56:14</td>
+
                 </tr>
                 <tr>
                     <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
                     <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
                     <td>admin</td>
                     <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
+
                 </tr>
                 <tr>
                     <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
                     <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
                     <td>admin</td>
                     <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
-                </tr><tr>
-                    <td>수정[UPDATE]</td>
-                    <td>07822</td>
-                    <td> </td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td>07822 (김포도시철도3공구현장)</td>
-                    <td> </td>
-                    <td>Sample 1</td>
-                    <td>G.711 PCMU</td>
-                    <td>사용함</td>
-                    <td>사용함</td>
-                    <td>AES</td>
-                    <td>30</td>
-                    <td>admin</td>
-                    <td>2014-08-26 10:56:14</td>
+
                 </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+                <tr>
+                    <td>수정[UPDATE]</td>
+                    <td>10003</td>
+                    <td>20130809 00:20</td>
+                    <td>23:59</td>
+                    <td>30</td>
+                    <td>3600</td>
+                    <td>1</td>
+                    <td>finaldy81@gmail.com</td>
+                    <td>admin</td>
+                    <td>2014-08-26 10:56:14</td>
+
+                </tr>
+
                 </tbody>
             </table>
             </div>
