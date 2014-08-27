@@ -1,4 +1,30 @@
 /*
+
+//레드
+//사이드 메뉴 색상
+@side-top-color :#37393b;
+@side-middle-color :#6f6f6f;
+@side-font-color : #fff;
+
+@side-menu-color: @side-middle-color;
+@gradient-color:lighten(@side-middle-color,10%);
+
+//테이블 색상
+
+@th-color : #9a9a9a;
+@th-bot-color : #6a1111;  // 밑줄 색상
+@th-font:#fff;
+
+//버튼  색상
+
+@btn-bg-color: #981414;
+@btn-border-color: darken(#981414,10%);
+
+@sub-title:#8a0e0e;
+@bg-title:@red-bg; //경로
+*/
+/*
+
 //기본컨셉
 //사이드 메뉴 색상
 @side-top-color :#e3dddd;
@@ -21,34 +47,6 @@
 
 @sub-title:@blue;
 @bg-title:@basic-bg;
-
-*/
-/*
-
-//블루컨셉
-//사이드 메뉴 색상
-
-@side-top-color : @blue1;
-@side-middle-color : @blue;
-@side-font-color : #fff;
-
-@side-menu-color: @blue1;
-@gradient-color:@blue;
-
-
-//테이블 색상
-
-@th-color : @th-blue;   //th 색상
-@th-bot-color : @blue;  // 밑줄 색상
-@th-font:@grey;
-
-//버튼  색상
-
-@btn-bg-color: @blue1;
-@btn-border-color: @blue;
-
-@sub-title:@blue;
-@bg-title:@blue-bg;
 */
 /*
 @side-top-color : @olive;
@@ -77,7 +75,7 @@
 .side-header-footer {
   margin: 5px;
   color: #ffffff;
-  background-color: #37393b;
+  background-color: #0a3142;
   border: 8px solid transparent;
   -moz-border-image: url("../../images/layout/border-all.png") 10 10 round;
   /* Old firefox */
@@ -96,7 +94,7 @@
 .side-middle {
   margin: 5px;
   color: #ffffff;
-  background-color: #6f6f6f;
+  background-color: #456770;
   border: 8px solid transparent;
   -moz-border-image: url("../../images/layout/border-all.png") 10 10 round;
   /* Old firefox */
@@ -123,25 +121,25 @@
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   text-indent: 0;
-  background: #6f6f6f;
+  background: #0a3142;
   /* Old browsers */
 
-  background: -moz-linear-gradient(top, #ffc578 0%, #6f6f6f 100%);
+  background: -moz-linear-gradient(top, #ffc578 0%, #0a3142 100%);
   /* FF3.6+ */
 
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc578), color-stop(100%, #fb9d23));
   /* Chrome,Safari4+ */
 
-  background: -webkit-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -webkit-linear-gradient(top, #456770 0%, #0a3142 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -o-linear-gradient(top, #456770 0%, #0a3142 100%);
   /* Opera 11.10+ */
 
-  background: -ms-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -ms-linear-gradient(top, #456770 0%, #0a3142 100%);
   /* IE10+ */
 
-  background: linear-gradient(to bottom, #898989 0%, #6f6f6f 100%);
+  background: linear-gradient(to bottom, #456770 0%, #0a3142 100%);
   /* W3C */
 
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffc578', endColorstr='#fb9d23', GradientType=0);
@@ -163,31 +161,31 @@
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   text-indent: 0;
-  background: #6f6f6f;
+  background: #0a3142;
   /* Old browsers */
 
-  background: -moz-linear-gradient(top, #ffc578 0%, #6f6f6f 100%);
+  background: -moz-linear-gradient(top, #ffc578 0%, #0a3142 100%);
   /* FF3.6+ */
 
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc578), color-stop(100%, #fb9d23));
   /* Chrome,Safari4+ */
 
-  background: -webkit-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -webkit-linear-gradient(top, #456770 0%, #0a3142 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -o-linear-gradient(top, #456770 0%, #0a3142 100%);
   /* Opera 11.10+ */
 
-  background: -ms-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -ms-linear-gradient(top, #456770 0%, #0a3142 100%);
   /* IE10+ */
 
-  background: linear-gradient(to bottom, #898989 0%, #6f6f6f 100%);
+  background: linear-gradient(to bottom, #456770 0%, #0a3142 100%);
   /* W3C */
 
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffc578', endColorstr='#fb9d23', GradientType=0);
   /* IE6-9 */
 
-  border: 0px solid #a2a2a2;
+  border: 0px solid #17739b;
   font-family: arial;
   font-size: 12px;
   font-style: normal;

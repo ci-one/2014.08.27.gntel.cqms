@@ -1,30 +1,29 @@
 /*
-
-//레드
+//기본컨셉
 //사이드 메뉴 색상
-@side-top-color :#37393b;
-@side-middle-color :#6f6f6f;
-@side-font-color : #fff;
+@side-top-color :#e3dddd;
+@side-middle-color :#d6cccc;
+@side-font-color : #222;
 
 @side-menu-color: @side-middle-color;
 @gradient-color:lighten(@side-middle-color,10%);
 
 //테이블 색상
 
-@th-color : #9a9a9a;
-@th-bot-color : #6a1111;  // 밑줄 색상
-@th-font:#fff;
+@th-color : #eee;   //th 색상
+@th-bot-color : @blue;  // 밑줄 색상
+@th-font:@grey;
 
 //버튼  색상
 
-@btn-bg-color: #981414;
-@btn-border-color: darken(#981414,10%);
+@btn-bg-color: #47a447;
+@btn-border-color: darken(#47a447,10%);
 
-@sub-title:#8a0e0e;
-@bg-title:@red-bg; //경로
+@sub-title:@blue;
+@bg-title:@basic-bg;
+
 */
 /*
-
 
 //블루컨셉
 //사이드 메뉴 색상
@@ -77,18 +76,12 @@
 */
 .btn-style {
   color: white;
-  background-color: #47a447;
-  border: 5px outset #388038;
-  border: 1px solid #285d28;
+  background-color: #981414;
+  border: 5px outset #6b0e0e;
 }
 .btn-style:hover {
   color: white;
-  border: 5px inset #388038;
-}
-.btn-style:hover {
-  color: white;
-  background: #388038;
-  border: 1px solid #388038;
+  border: 5px inset #6b0e0e;
 }
 .title-option {
   color: white;
@@ -96,7 +89,7 @@
   font-weight: 700;
   padding: 0.1em;
   padding-bottom: 0.8em;
-  background-image: url("../../images/layout/title-bg-basic.png");
+  background-image: url("../../images/layout/title-bg.png");
   background-size: 100% 100%;
   z-index: 1000;
 }
@@ -131,7 +124,7 @@ div > .contents-center {
   font-weight: 700;
   padding: 0.1em;
   padding-bottom: 0.8em;
-  background-image: url("../../images/layout/title-bg-basic.png");
+  background-image: url("../../images/layout/title-bg.png");
   background-size: 100% 100%;
   z-index: 1000;
 }
@@ -141,7 +134,7 @@ div > .contents-center {
   font-weight: 700;
   padding: 0.1em;
   padding-bottom: 0.8em;
-  background-image: url("../../images/layout/title-bg-basic.png");
+  background-image: url("../../images/layout/title-bg.png");
   background-size: 100% 100%;
   z-index: 1000;
   padding-left: 60% !important;
@@ -153,7 +146,7 @@ div > .contents-center {
   color: white;
   font-size: 14px;
   font-weight: 700;
-  background-color: #456770;
+  background-color: #8a0e0e;
   border-radius: 7px;
   width: 290px;
   height: 26px;
@@ -227,7 +220,7 @@ table > tbody > tr > td {
 .list-option > thead > tr > th {
   text-align: center;
   line-height: 25px;
-  border-bottom: solid 2px #456770;
+  border-bottom: solid 2px #6a1111;
   position: relative;
 }
 .list-option > thead > tr > th > div.popup {
@@ -245,8 +238,8 @@ table > tbody > tr > td {
   text-decoration: none !important;
 }
 .list-header-option {
-  color: #222222;
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: #9a9a9a;
 }
 .list-contents-option {
   color: black;
@@ -331,18 +324,18 @@ table > tbody > tr > td {
 }
 .btn-st1 {
   color: white;
-  background-color: #47a447;
-  border: 5px outset #388038;
-  border: 1px solid #285d28;
+  background-color: #981414;
+  border: 5px outset #6b0e0e;
+  border: 1px solid #3e0808;
 }
 .btn-st1:hover {
   color: white;
-  border: 5px inset #388038;
+  border: 5px inset #6b0e0e;
 }
 .btn-st1:hover {
   color: white;
-  background: #388038;
-  border: 1px solid #388038;
+  background: #6b0e0e;
+  border: 1px solid #6b0e0e;
 }
 .pagenation-remove-margin {
   margin: 0;
