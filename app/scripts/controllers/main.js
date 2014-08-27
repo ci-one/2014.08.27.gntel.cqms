@@ -2,15 +2,20 @@
 
 angular.module('gntelCqmsApp')
     .controller('MainCtrl', function ($scope, $http, $route, $rootScope, $location) {
-        $http.get('/api/awesomeThings').success(function (awesomeThings) {
-            $scope.awesomeThings = awesomeThings;
-        });
 
         var init = function() {
             var layout = false;
 
+            console.log($location.url());
+
             switch($location.url()) {
+                case '':
+                    layout = false;
+                    break;
                 case '/':
+                    layout = false;
+                    break;
+                case '/#/':
                     layout = false;
                     break;
                 default:

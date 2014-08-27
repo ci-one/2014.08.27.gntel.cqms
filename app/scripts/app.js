@@ -61,6 +61,11 @@ angular.module('gntelCqmsApp', [
             //종료:김선규
 
 
+            // 추가 : 심정미
+            .when('/quality/result/demand', {
+                templateUrl: 'views/contents/052_S_2510_quality.result.demand.html'
+            })
+            // 종료 : 심정미
 
             //추가:채영범
             .when('/probe/list', {
