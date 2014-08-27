@@ -1,0 +1,61 @@
+<div class="contents-layout" ng-controller="userOrgListCtrl">
+
+    <!-- list ▼ -->
+    <div ng-init="orderby={name:'desc', id:'desc', count:'desc'}">
+        <table class="table tb-list table-bordered list-option">
+            <thead class="list-option">
+            <tr class="list-header-option">
+                <th class="text-center">전체선택</th>
+                <th class="text-center">이용기관ID</th>
+                <th class="text-center">이용기관명</th>
+                <th class="text-center">담당자명</th>
+                <th class="text-center">담당자 전화번호</th>
+                <th class="text-center">사용여부</th>
+            </tr>
+            </thead>
+            <tbody class="text-center list-contents-option">
+            <!-- filter:{'useyn':'N'} -->
+            <tr ng-repeat="item in filterItems = (items | filter:{code:search.code} | filter:{value:search.value})"
+                ng-if="currentPage*itemsPerPage <= $index && $index < (currentPage+1)*itemsPerPage">
+                <td><input type="checkbox" ng-model="check[$index]"></td>
+                <td>{{item['code']}}</td>
+                <td>{{item['value']}}</td>
+                <td>{{item['managertel']}}</td>
+                <td>{{item['managername']}}</td>
+                <td>{{item['useyn']=='Y'?'사용함':'사용안함'}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <ul class="list-unstyled list-inline remove-margin pagenation-height text-center list-page">
+            <li>
+                <!-- ng-class="{disabled: currentPage < 10}" -->
+                <a href="" ng-click="prev10Page()">
+                    <span class="glyphicon glyphicon-backward"></span>
+                </a>
+            </li>
+            <li ng-class="{disabled: currentPage == 0}">
+                <a href="" ng-click="prevPage()">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </li>
+            <li ng-repeat="n in range(currentPage-2, currentPage+3)"
+                ng-class="{active: n == currentPage}"
+                ng-click="setPage()">
+                <a href="" ng-bind="n + 1"></a>
+            </li>
+            <li ng-class="{disabled: (getPageMax() == 0 || currentPage == getPageMax() - 1)}">
+                <a href="" ng-click="nextPage()">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </li>
+            <li>
+                <!-- ng-class="{disabled: (getPageMax() == 0 || currentPage > getPageMax() - 11)}" -->
+                <a href="" ng-click="next10Page()">
+                    <span class="glyphicon glyphicon-forward"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- list ▲ -->
+
+</div>

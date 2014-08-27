@@ -1,0 +1,50 @@
+.login {
+    width: 500px;
+    height: 330px;
+    margin: 0 auto;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.login > div {
+    display: inline-block;
+}
+
+.login-header {
+    margin: 10px;
+    padding: 0 10px;
+}
+
+.login-header > .pull-right > h2 {
+    margin: 10px;
+    padding: 0px;
+}
+.login-header > .pull-left > img {
+    margin: 8px;
+    padding: 0px;
+}
+
+.login-input {
+    margin: 10px;
+}
+
+.login-input > .input-area {
+    margin-top: 10px;
+    padding: 30px;
+    color: inherit;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.login-input > .input-area > p > a {
+    padding: 3px;
+}
+
+.login-footer {
+    margin: 10px;
+    padding: 10px;
+}
+
+.login-footer > p {
+    margin: 0px;
+}

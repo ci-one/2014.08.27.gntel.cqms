@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="styles/layout/contents.css">
+
+<div class="contents-layout">
+    <!-- title ▼ -->
+    <div class="title-option">
+        　　　이용기관 관리
+    </div>
+    <!-- title ▲ -->
+
+    <!-- contents ▼ -->
+    <div class="contents-background contents-center">
+
+        <!-- search ▼ -->
+        <div>
+            <table class="table tb-list remove-margin contents-center">
+                <tbody>
+                <tr>
+                    <th class="list-header-option">이용기간ID</th>
+                    <td class="list-contents-option"><input type="text" ng-model="search.code"></td>
+                    <th class="list-header-option">이용기간명</th>
+                    <td class="list-contents-option"><input type="text" ng-model="search.value"></td>
+                    <td class="list-header-option"><button class="btn btn-style" ng-click="trySearch()">검색</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- search ▲ -->
+
+        <!-- list -->
+        <div ng-include="'views/contents/052_S_3310_admin.org.list.html'"></div>
+
+        <div class="row">
+            <ul class="list-unstyled list-inline">
+                <li class="pull-right" ng-init="state='Y'; add=false;">
+                    <button class="btn btn-style" ng-click="checkEditState()">{{state=='Y'? '사용안함':'사용함'}}</button>
+                    <button class="btn btn-style" ng-click="add=!add;">추가</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- info ng-if="add || selectedItem" -->
+        <div ng-if="add || selectedItem" ng-include="'views/contents/052_S_3320_admin.org.info.html'"></div>
+
+    </div>
+
+    <!-- contents ▲ -->
+</div>
