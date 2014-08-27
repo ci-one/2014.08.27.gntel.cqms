@@ -19,7 +19,7 @@ angular.module('gntelCqmsApp', [
                 templateUrl: 'views/contents/052_S_2100_quality.weather.chart.html'
             })
             .when('/probe/list', {
-                templateUrl: 'views/contents/052_S_2110_probe.list.html'
+                templateUrl: '../views/contents/CHAE/052_S_2221_probe.plcy.setting.default.html'
             })
 
 
@@ -60,10 +60,26 @@ angular.module('gntelCqmsApp', [
 
 
 
-
+            //추가:채영범
             .when('/probe/plcy_list', {
-                templateUrl: 'views/contents/052_S_2210_probe.plcy.list.html'
+                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
             })
+            .when('/probe/plcy_list', {
+                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            })
+            .when('/probe/plcy_list', {
+                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            })
+            .when('/probe/plcy_list', {
+                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            })
+            .when('/probe/plcy_list', {
+                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            })
+            .when('/probe/plcy_list', {
+                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            })
+            //종료:채영범
             .when('/admin/user', {
                 templateUrl: 'views/contents/052_S_3100_admin.user.html'
             })
