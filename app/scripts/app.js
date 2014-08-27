@@ -14,6 +14,8 @@ angular.module('gntelCqmsApp', [
             })
             .when('/login', {
                 redirectTo: '/quality/weather_chart'
+            }).when('/loginadd', {
+                redirectTo: 'views/contents/052_S_1100_user.add.html'
             })
             .when('/quality/weather_chart', {
                 templateUrl: 'views/contents/052_S_2100_quality.weather.chart.html'
