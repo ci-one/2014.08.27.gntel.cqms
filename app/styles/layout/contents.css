@@ -314,4 +314,13 @@ table > tbody > tr > td {
   padding: 3px;
 }
 
+.glyphicon-arrow-up {
+    color:red;
+}
+
+.glyphicon-arrow-down {
+    color:blue;
+}
+
+
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

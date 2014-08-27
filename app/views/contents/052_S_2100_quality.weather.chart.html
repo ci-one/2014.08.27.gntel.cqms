@@ -87,32 +87,37 @@
             <table class="table tb-list remove-margin text-center">
                 <tbody>
                 <tr>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-01.png" style="width:25px" alt="best"/>
+                    <th rowspan="2" class="list-header-option text-center" style="padding:15px 10px">
+                        <!-- grade1 -->
+                        <img src="images/icon/weather/grade1.png" style="width:25px" alt="best"/>
                         <br/>
                         매우좋음
                     </th>
                     <td>{{'90'}}≤R값</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-02.png" style="width:25px" alt="good"/>
+                    <th rowspan="2" class="list-header-option text-center" style="padding:15px 10px">
+                        <!-- grade2 -->
+                        <img src="images/icon/weather/grade2.png" style="width:25px" alt="good"/>
                         <br/>
                         좋음
                     </th>
                     <td>{{'80'}}≤R값＜{{'90'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-05.png" style="width:25px" alt="soso"/>
+                    <th rowspan="2" class="list-header-option text-center" style="padding:15px 10px">
+                        <!-- grade3 -->
+                        <img src="images/icon/weather/grade3.png" style="width:25px" alt="soso"/>
                         <br/>
                         보통
                     </th>
                     <td>{{'70'}}≤R값＜{{'80'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-07.png" style="width:25px" alt="bad"/>
+                    <th rowspan="2" class="list-header-option text-center" style="padding:15px 10px">
+                        <!-- grade4 -->
+                        <img src="images/icon/weather/grade4.png" style="width:25px" alt="bad"/>
                         <br/>
                         나쁨
                     </th>
                     <td>{{'60'}}≤R값＜{{'70'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-09.png" style="width:25px" alt="worst"/>
+                    <th rowspan="2" class="list-header-option text-center" style="padding:15px 10px">
+                        <!-- grade5 -->
+                        <img src="images/icon/weather/grade5.png" style="width:25px" alt="worst"/>
                         <br/>
                         매우나쁨
                     </th>
@@ -132,9 +137,17 @@
 
         <div class="row clearfix">
             <div class="pull-right">
-                <button type="button" class="btn btn-style" style="margin: 15px 15px;" ng-click="">기준 값 설정
+                <button type="button" class="btn btn-style" style="margin: 15px 15px;"
+                        onclick="window.open('views/contents/052_S_2120_quality.weather.threshold.html'
+                        , 'openRequest'
+                        , 'width=500, height=670, toolbar=no, menubar=no, scrollbars=no, resizable=yes')">
+                    기준 값 설정
                 </button>
-                <button type="button" class="btn btn-style" ng-click="">R등급 확인
+                <button type="button" class="btn btn-style"
+                        onclick="window.open('views/contents/052_S_2130_info.r.value.threshold.html'
+                        , 'openRequest'
+                        , 'width=800, height=820, toolbar=no, menubar=no, scrollbars=no, resizable=yes')">
+                    R등급 확인
                 </button>
             </div>
         </div>
