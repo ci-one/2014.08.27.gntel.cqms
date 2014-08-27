@@ -1,0 +1,204 @@
+<link rel="stylesheet" href="styles/layout/contents.css">
+
+<div ng-controller="userManageCtrl" class="contents-layout">
+
+    <!-- title ▼ -->
+    <div class="title-option">
+        　　　On-Demand 측정 결과
+    </div>
+    <!-- title ▲ -->
+
+    <!-- contents ▼ -->
+    <div class="contents-background">
+
+        <!-- search ▼ -->
+        <table class="table tb-list remove-margin contents-center">
+            <tbody>
+            <tr>
+                <th class="list-header-option text-center" style="padding: 15px 0; width:150px;">
+                    송신 이용기관명
+                </th>
+                <td>
+                    <select ng-options="" class="form-control">
+                        <option value="all">전체선택</option>
+                    </select>
+                </td>
+                <th class="list-header-option text-center" style="padding: 15px 0; width:150px;">
+                    수신 이용기관명
+                </th>
+                <td>
+                    <select ng-options="" class="form-control">
+                        <option value="all">전체선택</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="list-header-option text-center" style="padding: 15px 0; width:150px;">
+                    송신 PROBE 전화번호
+                </th>
+                <td>
+                    <input type="text" class="form-control">
+                </td>
+                <th class="list-header-option text-center" style="padding: 15px 0; width:150px;">
+                    수신 PROBE 전화번호
+                </th>
+                <td>
+                    <input type="text" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <th class="list-header-option text-center" style="padding: 15px 0; width:150px;">
+                    측정 품질(R 등급)
+                </th>
+                <td>
+                    <select ng-options="" class="form-control">
+                        <option value="all">전체</option>
+                        <option value="best">최고</option>
+                        <option value="good">높음</option>
+                        <option value="soso">중간</option>
+                        <option value="bad">낮음</option>
+                        <option value="worst">최저</option>
+                    </select>
+                </td>
+                <th class="list-header-option text-center" style="padding: 15px 0; width:150px;">
+                    측정 결과
+                </th>
+                <td>
+                    <select ng-options="" class="form-control">
+                        <option value="all">전체</option>
+                        <option value="success">성공</option>
+                        <option value="failed">실패</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="list-header-option text-center" style="padding: 18px 0">
+                    기간
+                </th>
+                <td colspan="3">
+                    <div class="row clearfix remove-margin">
+                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate"
+                             style="float:left; padding: 4px;">
+                            <!-- calendar popup -->
+                            <div ng-if="showCal1" ng-include="'views/partials/sidebar/calendar.html'"
+                                 style="position: absolute; top: 24px; left: 100px; z-index: 100"></div>
+
+                            <!-- search input -->
+                            <input type="text" class="form-control" ng-model="search.joindate">
+
+                            <!-- button -->
+                        <span class="input-group-btn">
+                            <button class="btn btn-default input-group-btn-custom"
+                                    type="button" ng-click="showCal1 = !showCal1;" btnType="glyphicon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </button>
+                        </span>
+                        </div>
+                        <span style="float:left; padding: 10px;">　~　</span>
+
+                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate"
+                             style="float:left; padding: 4px;">
+                            <!-- calendar popup -->
+                            <div ng-if="showCal2" ng-include="'views/partials/sidebar/calendar.html'"
+                                 style="position: absolute; top: 24px; left: 100px; z-index: 100"></div>
+
+                            <!-- search input -->
+                            <input type="text" class="form-control" ng-model="search.joindate">
+
+                            <!-- button -->
+                        <span class="input-group-btn">
+                            <button class="btn btn-default input-group-btn-custom"
+                                    type="button" ng-click="showCal2 = !showCal2;" btnType="glyphicon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </button>
+                        </span>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-style">검색</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- search ▲ -->
+
+        <!-- average ▼ -->
+        <div style="margin-top: 10px">
+            <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
+                <thead>
+                <tr>
+                    <th rowspan="2" class="list-header-option">
+                        R값
+                    </th>
+                    <th rowspan="2" class="list-header-option">
+                        MOS
+                    </th>
+                    <th rowspan="2" class="list-header-option">
+                        Delay<br/>(ms)
+                    </th>
+                    <th colspan="2" class="list-header-option" style="border-bottom:0;">
+                        손실율(%)
+                    </th>
+                    <th colspan="2" class="list-header-option" style="border-bottom:0;">
+                        JITTER(ms)
+                    </th>
+                    <th rowspan="2" class="list-header-option">
+                        호 접속<br/>성공률
+                    </th>
+                </tr>
+                <tr>
+                    <th class="list-header-option">TX</th>
+                    <th class="list-header-option">RX</th>
+                    <th class="list-header-option">TX</th>
+                    <th class="list-header-option">RX</th>
+                </tr>
+                </thead>
+                <tbody class="text-center list-contents-option">
+                <tr>
+                    <td>90.29</td>
+                    <td>4.30</td>
+                    <td>0.28</td>
+                    <td>2.80</td>
+                    <td>0.40</td>
+                    <td>0.00</td>
+                    <td>0.14</td>
+                    <td>77.02</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- average ▲ -->
+
+        <!-- selector ▼ -->
+        <div class="row clearfix remove-margin" ng-init="page='list';" style="margin-top: 10px">
+            <div class="tabbable" id="tabs">
+                <div class="pull-right" style="margin-bottom: 10px">
+                    <button type="button" class="btn btn-style" ng-click="">R 등급 확인
+                    </button>
+                </div>
+                <div class="pull-right" style="margin-right: 10px">
+                    <button type="button" class="btn btn-style" ng-click="">엑셀 변환
+                    </button>
+                </div>
+                <ul class="nav nav-tabs nav-pills">
+                    <li ng-class="{active:page=='list'}">
+                        <a href="" data-taggle="tab" ng-click="page='list';">목록</a>
+                    </li>
+                    <li ng-class="{active:page=='chart'}">
+                        <a href="" data-taggle="tab" ng-click="page='chart'">차트</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- list ▼ -->
+            <div ng-if="page=='list'" ng-include="'views/contents/052_S_2511_quality.result.demand.list.html'"></div>
+            <!-- list ▲ -->
+            <!-- list ▼ -->
+            <div ng-if="page=='chart'" ng-include="'views/contents/052_S_2512_quality.result.demand.chart.html'"></div>
+            <!-- list ▲ -->
+        </div>
+        <!-- selector ▲ -->
+    </div>
+
+    <!-- contents ▲ -->
+</div>
