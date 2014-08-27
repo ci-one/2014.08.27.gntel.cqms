@@ -16,7 +16,7 @@ angular.module('gntelCqmsApp', [
                 redirectTo: '/quality/weather_chart'
             })
             .when('/quality/weather_chart', {
-                templateUrl: 'views/contents/052_S_2100_quality.weather_chart.html'
+                templateUrl: '../views/contents/052_S_2100_quality.weather.chart.html'
             })
             .when('/probe/list', {
                 templateUrl: 'views/contents/052_S_2110_probe.list.html'
