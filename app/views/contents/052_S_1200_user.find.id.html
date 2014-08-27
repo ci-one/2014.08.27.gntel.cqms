@@ -1,0 +1,152 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>GNTEL - 대림산업</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(app) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout/contents.css">
+    <link rel="stylesheet" href="styles/layout/login.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="gntelCqmsApp" ng-controller="MainCtrl">
+
+
+<div class="login-add center-block" style="margin-top:15px;">
+<div class="col-md-12">
+    <!-- title ▼ -->
+    <div class="subtitle" style="padding-left: 0;">
+        　　　이용자 가입
+    </div>
+    <!-- title ▲ -->
+        </div>
+    <p style="padding-left:15px;"><strong class="text-danger">*</strong> 표시는 필수 입력 항목입니다.</p>
+    <!-- table ▼ -->
+   <div class="col-md-12">
+    <table class="table table-bordered remove-margin">
+        <tbody>
+        <tr>
+            <th class="list-header-option">이용자ID <strong class="text-danger">*</strong></th>
+            <td> <input type="id"  class="input-sm"/><btn class="btn btn-default input-group-btn-custom btn-sm" style="margin-left:15px;">ID중복확인</btn></td>
+        </tr>
+        <tr>
+            <th class="list-header-option">비밀번호 <strong class="text-danger">*</strong></th>
+            <td><input type="password" class="input-sm" /> 8~18자의 영문, 숫자 조합</td>
+        </tr>
+        <tr>
+            <th class="list-header-option">비밀번호확인 <strong class="text-danger">*</strong></th>
+            <td><input type="password" class="input-sm" /> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">성명 <strong class="text-danger">*</strong></th>
+            <td><input type="text" class="input-sm" /> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">이용기관명 <strong class="text-danger">*</strong></th>
+            <td><select class="input-sm">
+                <option>이용기관명 선택</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">부서명</th>
+            <td><input type="text" class="input-sm"/> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">직위명</th>
+            <td><input type="text" class="input-sm"/> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">회사 전화번호</th>
+            <td><input type="text" class="input-sm" /> - <input type="text" class="input-sm" /> - <input type="text" class="input-sm" /> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">회사 FAX</th>
+            <td><input type="text" class="input-sm" /> - <input type="text" class="input-sm" /> - <input type="text" class="input-sm"/> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">핸드폰</th>
+            <td><select class="input-sm">
+                <option>선택</option>
+                <option>010</option>
+                <option>011</option>
+            </select> - <input type="text" class="input-sm"  /> - <input type="text"  class="input-sm" /> </td>
+        </tr>
+        <tr>
+            <th class="list-header-option">E-mail <strong class="text-danger">*</strong></th>
+            <td> <input type="EMAIL"  class="input-sm"/> @ <input type="EMAIL"  class="input-sm"/>
+                <select class="input-sm">
+                <option>직접입력</option>
+                <option>naver.com</option>
+                <option>nate.com</option>
+                    <option>daum.net</option>
+                    <option>paran.com</option>
+                    <option>yahoo.co.kr</option>
+                    <option>empal.com</option>
+                    <option>hanmir.com</option>
+                    <option>hotmail.com</option>
+                    <option>korea.com</option>
+            </select></td>
+        </tr>
+        </tbody>
+    </table>
+       </div>
+
+    <div class="col-md-12" style="margin-top: 15px;">
+        <div class="pull-right">
+        <button class="btn btn-style"><span class="glyphicon glyphicon-ok" ></span> 확인 </button> <button class="btn btn-style" style="margin-left:10px; background:#a2a2a2;"> 취소 </button>
+        </div>
+        </div>
+</div>
+</div>
+
+
+
+
+
+<!-- build:js(app) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/services/code.services.js"></script>
+<script src="scripts/services/user.manage.services.js"></script>
+<script src="scripts/services/user.access.services.js"></script>
+<script src="scripts/services/user.org.services.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/user.manage.controller.js"></script>
+<script src="scripts/controllers/user.access.controller.js"></script>
+<script src="scripts/controllers/user.org.controller.js"></script>
+<!-- endbuild -->
+</body>
+</html>
