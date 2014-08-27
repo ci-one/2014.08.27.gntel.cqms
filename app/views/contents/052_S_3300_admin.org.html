@@ -8,18 +8,24 @@
     <!-- title ▲ -->
 
     <!-- contents ▼ -->
-    <div class="contents-background contents-center" ng-controller="userOrgCtrl">
+    <div class="contents-background" ng-controller="userOrgCtrl">
 
         <!-- search ▼ -->
         <div>
             <table class="table tb-list remove-margin contents-center">
                 <tbody>
                 <tr>
-                    <th class="list-header-option">이용기간ID</th>
-                    <td class="list-contents-option"><input type="text" ng-model="search.code"></td>
-                    <th class="list-header-option">이용기간명</th>
-                    <td class="list-contents-option"><input type="text" ng-model="search.value"></td>
-                    <td class="list-header-option"><button class="btn btn-style" ng-click="trySearch()">검색</button></td>
+                    <th class="list-header-option text-center" style="padding:15px 0">이용기간ID</th>
+                    <td>
+                        <input type="text" ng-model="search.code" class="form-control">
+                    </td>
+                    <th class="list-header-option text-center" style="padding:15px 0">이용기간명</th>
+                    <td>
+                        <input type="text" ng-model="search.value" class="form-control">
+                    </td>
+                    <td class="list-header-option text-center">
+                        <button class="btn btn-style" ng-click="trySearch()">검색</button>
+                    </td>
                 </tr>
                 </tbody>
             </table>

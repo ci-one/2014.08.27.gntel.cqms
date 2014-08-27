@@ -43,7 +43,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
-        url: 'http://192.168.1.13:<%= express.options.port %>'
+        url: 'http://192.168.1.16:<%= express.options.port %>'
       }
     },
     watch: {
@@ -162,7 +162,7 @@ module.exports = function (grunt) {
     'node-inspector': {
       custom: {
         options: {
-          'web-host': '192.168.1.13'
+          'web-host': '192.168.1.16'
         }
       }
     },
@@ -184,7 +184,7 @@ module.exports = function (grunt) {
             // opens browser on initial server start
             nodemon.on('config:update', function () {
               setTimeout(function () {
-                require('open')('http://192.168.1.13:8080/debug?port=5858');
+                require('open')('http://192.168.1.16:8080/debug?port=5858');
               }, 500);
             });
           }
