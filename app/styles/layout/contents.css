@@ -144,6 +144,9 @@ table > tbody > tr > td {
   display: table-cell;
   vertical-align: middle;
 }
+.table-left tr td {
+  text-align: left;
+}
 .table-btn {
   margin: 0;
   padding: 3px;

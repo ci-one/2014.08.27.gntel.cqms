@@ -14,6 +14,8 @@ angular.module('gntelCqmsApp', [
             })
             .when('/login', {
                 redirectTo: '/quality/weather_chart'
+            }).when('/loginadd', {
+                redirectTo: 'views/contents/052_S_1100_user.add.html'
             })
             .when('/quality/weather_chart', {
                 templateUrl: 'views/contents/052_S_2100_quality.weather.chart.html'
@@ -61,25 +63,29 @@ angular.module('gntelCqmsApp', [
 
 
             //추가:채영범
-            .when('/probe/plcy_list', {
-                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            .when('/probe/list', {
+                templateUrl: '../views/contents/052_S_2210_probe.list.html'
             })
-            .when('/probe/plcy_list', {
-                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            .when('/probe/setting', {
+                templateUrl: '../views/contents/052_S_2211_probe.setting.default.html'
             })
-            .when('/probe/plcy_list', {
-                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            .when('/probe/info', {
+                templateUrl: '../views/contents/052_S_2212_probe.info.html'
             })
-            .when('/probe/plcy_list', {
-                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            .when('/poly/list', {
+                templateUrl: '../views/contents/052_S_2220_probe.plcy.list.html'
             })
-            .when('/probe/plcy_list', {
-                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            .when('/poly/info', {
+                templateUrl: '../views/contents/052_S_2222_probe.plcy.info.html'
             })
-            .when('/probe/plcy_list', {
-                templateUrl: '../views/contents/CHAE/052_S_2211_probe.setting.default.html'
+            .when('/poly/setting', {
+                templateUrl: '../views/contents/052_S_2221_probe.plcy.setting.default.html'
+            })
+            .when('/probe/search', {
+                templateUrl: '../views/contents/052_S_2301_quality.check.search.probe.html'
             })
             //종료:채영범
+
             .when('/admin/user', {
                 templateUrl: 'views/contents/052_S_3100_admin.user.html'
             })
