@@ -4,7 +4,7 @@
 
     <!-- title ▼ -->
     <div class="title-option">
-        　　　품질기상도
+        　　　측정현황
     </div>
     <!-- title ▲ -->
 
@@ -15,120 +15,54 @@
         <table class="table tb-list remove-margin contents-center">
             <tbody>
             <tr>
-                <th class="list-header-option text-center" style="padding: 15px 0">
-                    이용기관명
+                <th class="list-header-option text-center">
+                    송신 허용기관명
+                </th>
+                <td>
+                    <input type="text" placeholder="대림산업[수송동]" class="form-control">
+                </td>
+                <th class="list-header-option text-center">
+                    수신 이용기관명
                 </th>
                 <td>
                     <select ng-options="" class="form-control">
                         <option value="all">전체선택</option>
                     </select>
                 </td>
-                <th class="list-header-option text-center" style="padding: 15px 0">
-                    집계범위(시간대)
+            </tr>
+            <tr>
+                <th class="list-header-option text-center">
+                    송신 PROBE 전화번호
                 </th>
-                <td style="padding: 15px 0">
-                    {{'00:00'}} ~ {{'23:00'}}
+                <td>
+                    <input type="text" class="form-control">
+                </td>
+                <th class="list-header-option text-center">
+                    수신 PROBE 전화번호
+                </th>
+                <td>
+                    <input type="text" class="form-control">
                 </td>
             </tr>
             <tr>
-                <th class="list-header-option text-center" style="padding: 15px 0">
-                    기간별
+                <th class="list-header-option text-center">
+                    정책ID
                 </th>
-                <td colspan="3">
-                    <div class="row clearfix remove-margin">
-                        <div style="float:left;">
-                            <input type="radio">일일　
-                            <input type="radio">주간　
-                            <input type="radio">월간　
-                            <input type="radio">기간선택　
-                        </div>
-                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left">
-                            <!-- calendar popup -->
-                            <div ng-if="showCal1" ng-include="'views/partials/sidebar/calendar.html'"
-                                 style="position: absolute; top: 24px; left: 100px;"></div>
-
-                            <!-- search input -->
-                            <input type="text" class="form-control" ng-model="search.joindate">
-
-                            <!-- button -->
-                        <span class="input-group-btn">
-                            <button class="btn btn-default input-group-btn-custom"
-                                    type="button" ng-click="showCal1 = !showCal1;" btnType="glyphicon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </button>
-                        </span>
-                        </div>
-                        <span style="float:left">　~　</span>
-                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left">
-                            <!-- calendar popup -->
-                            <div ng-if="showCal2" ng-include="'views/partials/sidebar/calendar.html'"
-                                 style="position: absolute; top: 24px; left: 100px;"></div>
-
-                            <!-- search input -->
-                            <input type="text" class="form-control" ng-model="search.joindate">
-
-                            <!-- button -->
-                        <span class="input-group-btn">
-                            <button class="btn btn-default input-group-btn-custom"
-                                    type="button" ng-click="showCal2 = !showCal2;" btnType="glyphicon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </button>
-                        </span>
-                        </div>
-                    </div>
+                <td colspan="2">
+                    <input type="text" class="form-control">
+                </td>
+                <td>
+                    <input type="button" class="btn btn-style" value="검색">
+                </td>
+            </tr>
+            <tr><!-- ng-if="items.length == 0" -->
+                <td colspan="4">
+                    B : 연결끊김 B : 측정대기/진행 B : 측정기능 중지 B : 측정 수행 중 B : 착신 통화 중
                 </td>
             </tr>
             </tbody>
         </table>
         <!-- search ▲ -->
-
-        <!-- icon info ▼ -->
-        <div class="row clearfix" style="margin-top: 15px;">
-            <table class="table tb-list remove-margin text-center">
-                <tbody>
-                <tr>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-01.png" style="width:25px" alt="best"/>
-                        <br/>
-                        매우좋음
-                    </th>
-                    <td>{{'90'}}≤R값</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-02.png" style="width:25px" alt="good"/>
-                        <br/>
-                        좋음
-                    </th>
-                    <td>{{'80'}}≤R값＜{{'90'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-05.png" style="width:25px" alt="soso"/>
-                        <br/>
-                        보통
-                    </th>
-                    <td>{{'70'}}≤R값＜{{'80'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-07.png" style="width:25px" alt="bad"/>
-                        <br/>
-                        나쁨
-                    </th>
-                    <td>{{'60'}}≤R값＜{{'70'}}</td>
-                    <th rowspan="2" class="list-header-option text-center">
-                        <img src="images/icon/weather/Weather_icons_white-09.png" style="width:25px" alt="worst"/>
-                        <br/>
-                        매우나쁨
-                    </th>
-                    <td>R값＜{{'60'}}</td>
-                </tr>
-                <tr>
-                    <td>{{'4.34'}}≤MOS</td>
-                    <td>{{'4.03'}}≤MOS＜{{'4.34'}}</td>
-                    <td>{{'3.60'}}≤MOS＜{{'4.03'}}</td>
-                    <td>{{'3.10'}}≤MOS＜{{'3.60'}}</td>
-                    <td>MOS＜{{'3.10'}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- icon info ▲ -->
 
         <div class="row clearfix">
             <div class="pull-right">
@@ -138,9 +72,158 @@
                 </button>
             </div>
         </div>
-
+<p></p>
         <!-- list ▼ -->
-        <div ng-include="'views/contents/052_S_2110_quality.weather.chart.list.html'"></div>
+        <div style="overflow: scroll;">
+            <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
+                <thead>
+                <tr>
+                    <th class="list-header-option">
+                        전체선택<br>
+                        <input type="checkbox">
+                    </th>
+                    <th class="list-header-option">
+                        정책 ID
+                    </th>
+                    <th class="list-header-option">
+                        송신 PROBE ▲
+                    </th>
+                    <th class="list-header-option">
+                        수신 PROBE ▲
+                    </th>
+                    <th class="list-header-option">
+                        송신측
+                    </th>
+                    <th class="list-header-option">
+                        수신측
+                    </th>
+                    <th class="list-header-option">
+                        측정상태
+                    </th>
+                    <th class="list-header-option">
+                        측정
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="text-center list-contents-option">
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        10001<br>[주기적 측정]
+                    </td>
+                    <td>
+                        대림산업[수송동]<br>124564
+                    </td>
+                    <td>
+                        07822 (김포도시철도3공구현장)<br>23456
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        10001<br>[주기적 측정]
+                    </td>
+                    <td>
+                        대림산업[수송동]<br>124564
+                    </td>
+                    <td>
+                        07822 (김포도시철도3공구현장)<br>23456
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        10001<br>[주기적 측정]
+                    </td>
+                    <td>
+                        대림산업[수송동]<br>124564
+                    </td>
+                    <td>
+                        07822 (김포도시철도3공구현장)<br>23456
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        B
+                    </td>
+                    <td>
+                        1
+                    </td>
+                </tr>
+       </tbody>
+
+            </table>
+            <!-- list ▲ -->
+        </div>
+        <div class="row clearfix">
+            <div class="pull-right">
+                <button type="button" class="btn btn-style" ng-click="">실행
+                </button>
+                <button type="button" class="btn btn-style" ng-click="">중지
+                </button>
+                <button type="button" class="btn btn-style" ng-click="">삭제
+                </button>
+            </div>
+        </div>
+        <div class="contents-center">
+            <ul class="pagination">
+                <li>
+                    <a href="#">Prev</a>
+                </li>
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">Next</a>
+                </li>
+            </ul>
+        </div>
         <!-- list ▲ -->
     </div>
 
