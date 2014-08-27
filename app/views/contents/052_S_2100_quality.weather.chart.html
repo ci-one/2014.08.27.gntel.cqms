@@ -31,18 +31,18 @@
                 </td>
             </tr>
             <tr>
-                <th class="list-header-option text-center" style="padding: 15px 0">
+                <th class="list-header-option text-center" style="padding: 18px 0">
                     기간별
                 </th>
                 <td colspan="3">
                     <div class="row clearfix remove-margin">
-                        <div style="float:left;">
+                        <div style="float:left; padding: 6px;">
                             <input type="radio">일일　
                             <input type="radio">주간　
                             <input type="radio">월간　
                             <input type="radio">기간선택　
                         </div>
-                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left">
+                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left; padding: 4px;">
                             <!-- calendar popup -->
                             <div ng-if="showCal1" ng-include="'views/partials/sidebar/calendar.html'"
                                  style="position: absolute; top: 24px; left: 100px; z-index: 100"></div>
@@ -58,8 +58,8 @@
                             </button>
                         </span>
                         </div>
-                        <span style="float:left">　~　</span>
-                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left">
+                        <span style="float:left; padding: 10px;">　~　</span>
+                        <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate" style="float:left; padding: 4px;">
                             <!-- calendar popup -->
                             <div ng-if="showCal2" ng-include="'views/partials/sidebar/calendar.html'"
                                  style="position: absolute; top: 24px; left: 100px; z-index: 100"></div>
@@ -74,6 +74,9 @@
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </button>
                         </span>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-style">검색</button>
                         </div>
                     </div>
                 </td>
