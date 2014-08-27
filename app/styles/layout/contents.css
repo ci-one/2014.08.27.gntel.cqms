@@ -25,28 +25,31 @@
 */
 /*
 
-//기본컨셉
-//사이드 메뉴 색상
-@side-top-color :#e3dddd;
-@side-middle-color :#d6cccc;
-@side-font-color : #222;
 
-@side-menu-color: @side-middle-color;
-@gradient-color:lighten(@side-middle-color,10%);
+//블루컨셉
+//사이드 메뉴 색상
+
+@side-top-color : @blue1;
+@side-middle-color : @blue;
+@side-font-color : #fff;
+
+@side-menu-color: @blue1;
+@gradient-color:@blue;
+
 
 //테이블 색상
 
-@th-color : #eee;   //th 색상
+@th-color : @th-blue;   //th 색상
 @th-bot-color : @blue;  // 밑줄 색상
 @th-font:@grey;
 
 //버튼  색상
 
-@btn-bg-color: #47a447;
-@btn-border-color: darken(#47a447,10%);
+@btn-bg-color: @blue1;
+@btn-border-color: @blue;
 
 @sub-title:@blue;
-@bg-title:@basic-bg;
+@bg-title:@blue-bg;
 */
 /*
 @side-top-color : @olive;
@@ -74,18 +77,18 @@
 */
 .btn-style {
   color: white;
-  background-color: #0a3142;
-  border: 5px outset #456770;
-  border: 1px solid #000000;
+  background-color: #47a447;
+  border: 5px outset #388038;
+  border: 1px solid #285d28;
 }
 .btn-style:hover {
   color: white;
-  border: 5px inset #456770;
+  border: 5px inset #388038;
 }
 .btn-style:hover {
   color: white;
-  background: #031016;
-  border: 1px solid #456770;
+  background: #388038;
+  border: 1px solid #388038;
 }
 .title-option {
   color: white;
@@ -93,10 +96,9 @@
   font-weight: 700;
   padding: 0.1em;
   padding-bottom: 0.8em;
-  background-image: url("../../images/layout/title-bg-blue.png");
+  background-image: url("../../images/layout/title-bg-basic.png");
   background-size: 100% 100%;
   z-index: 1000;
-  padding-left: 60% !important;
 }
 div > .contents {
   font-size: 12px;
@@ -129,7 +131,7 @@ div > .contents-center {
   font-weight: 700;
   padding: 0.1em;
   padding-bottom: 0.8em;
-  background-image: url("../../images/layout/title-bg-blue.png");
+  background-image: url("../../images/layout/title-bg-basic.png");
   background-size: 100% 100%;
   z-index: 1000;
 }
@@ -139,7 +141,7 @@ div > .contents-center {
   font-weight: 700;
   padding: 0.1em;
   padding-bottom: 0.8em;
-  background-image: url("../../images/layout/title-bg-blue.png");
+  background-image: url("../../images/layout/title-bg-basic.png");
   background-size: 100% 100%;
   z-index: 1000;
   padding-left: 60% !important;
@@ -244,7 +246,7 @@ table > tbody > tr > td {
 }
 .list-header-option {
   color: #222222;
-  background-color: #b4cbd3;
+  background-color: #eeeeee;
 }
 .list-contents-option {
   color: black;
@@ -329,18 +331,18 @@ table > tbody > tr > td {
 }
 .btn-st1 {
   color: white;
-  background-color: #0a3142;
-  border: 5px outset #456770;
-  border: 1px solid #000000;
+  background-color: #47a447;
+  border: 5px outset #388038;
+  border: 1px solid #285d28;
 }
 .btn-st1:hover {
   color: white;
-  border: 5px inset #456770;
+  border: 5px inset #388038;
 }
 .btn-st1:hover {
   color: white;
-  background: #031016;
-  border: 1px solid #456770;
+  background: #388038;
+  border: 1px solid #388038;
 }
 .pagenation-remove-margin {
   margin: 0;
