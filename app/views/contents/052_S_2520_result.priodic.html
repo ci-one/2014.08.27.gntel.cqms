@@ -1,218 +1,232 @@
 <link rel="stylesheet" href="styles/layout/contents.css">
 <script src="plugin/highcharts.js"></script>
 <script src="plugin/exporting.js"></script>
-<div ng-controller="userManageCtrl" class="contents-layout">
+<div class="contents-layout">
 
-    <!-- title ▼ -->
-    <div class="title-option">
-        　　　주기적 측정 결과
-    </div>
-    <!-- title ▲ -->
+<!-- title ▼ -->
+<div class="title-option">
+    　　　주기적 측정 결과
+</div>
+<!-- title ▲ -->
 
-    <!-- contents ▼ -->
-    <div class="contents-background">
+<!-- contents ▼ -->
+<div class="contents-background">
 
-    <!-- search ▼ -->
-    <table class="table tb-list remove-margin contents-center">
-        <tbody>
-        <tr>
-            <th class="list-header-option text-center">
-                송신 허용기관명
-            </th>
-            <td>
-                <input type="text" placeholder="대림산업[수송동]" class="form-control">
-            </td>
-            <th class="list-header-option text-center">
-                수신 이용기관명
-            </th>
-            <td>
-                <select ng-options="" class="form-control">
-                    <option value="all">전체선택</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <th class="list-header-option text-center">
-                송신 PROBE 전화번호
-            </th>
-            <td>
-                <input type="text" class="form-control">
-            </td>
-            <th class="list-header-option text-center">
-                수신 PROBE 전화번호
-            </th>
-            <td>
-                <input type="text" class="form-control">
-            </td>
-        </tr>
-        <tr>
-            <th class="list-header-option text-center">
-                측정 품질(R등급)
-            </th>
-            <td>
-                <select ng-options="">
-                    <option value="all">전체</option>
-                </select>
-            </td>
-            <th class="list-header-option text-center">
-                측정결과
-            </th>
-            <td>
-                <select ng-options="">
-                    <option value="all">전체</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <th class="list-header-option text-center">
-                정책ID
-            </th>
-            <td colspan="2">
-                <div class="row clearfix remove-margin">
-                    <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate"
-                         style="float:left">
-                        <!-- calendar popup -->
-                        <div ng-if="showCal1" ng-include="'views/partials/sidebar/calendar.html'"
-                             style="position: absolute; top: 24px; left: 100px;"></div>
+<!-- search ▼ -->
+<table class="table tb-list remove-margin contents-center list-option">
+    <tbody>
+    <tr>
+        <th class="list-header-option text-center" style="padding: 16px 0">
+            송신 허용기관명
+        </th>
+        <td>
+            <input type="text" class="form-control" value="대림산업[수송동]">
+        </td>
+        <th class="list-header-option text-center" style="padding: 16px 0">
+            수신 이용기관명
+        </th>
+        <td>
+            <select ng-options="" class="form-control">
+                <option value="all">전체선택</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th class="list-header-option text-center" style="padding: 16px 0">
+            송신 PROBE 전화번호
+        </th>
+        <td>
+            <input type="text" class="form-control">
+        </td>
+        <th class="list-header-option text-center" style="padding: 16px 0">
+            수신 PROBE 전화번호
+        </th>
+        <td>
+            <input type="text" class="form-control">
+        </td>
+    </tr>
+    <tr>
+        <th class="list-header-option text-center" style="padding: 16px 0">
+            측정 품질(R등급)
+        </th>
+        <td>
+            <select ng-options="" class="form-control">
+                <option value="all">전체</option>
+            </select>
+        </td>
+        <th class="list-header-option text-center" style="padding: 16px 0">
+            측정결과
+        </th>
+        <td>
+            <select ng-options="" class="form-control">
+                <option value="all">전체</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th class="list-header-option text-center" style="padding: 16px 0">
+            정책ID
+        </th>
+        <td colspan="2" style="margin: 0; padding: 8px 8px">
+            <div class="row clearfix remove-margin">
+                <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate"
+                     style="float:left">
+                    <!-- calendar popup -->
+                    <div ng-if="showCal1" ng-include="'views/partials/sidebar/calendar.html'"
+                         style="position: absolute; top: 24px; left: 100px; z-index:100;"></div>
 
-                        <!-- search input -->
-                        <input type="text" class="form-control" ng-model="search.joindate">
+                    <!-- search input -->
+                    <input type="text" class="form-control" ng-model="search.joindate">
 
-                        <!-- button -->
+                    <!-- button -->
                         <span class="input-group-btn">
                             <button class="btn btn-default input-group-btn-custom"
                                     type="button" ng-click="showCal1 = !showCal1;" btnType="glyphicon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </button>
                         </span>
-                    </div>
-                    <span style="float:left">　~　</span>
+                </div>
 
-                    <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate"
-                         style="float:left">
-                        <!-- calendar popup -->
-                        <div ng-if="showCal2" ng-include="'views/partials/sidebar/calendar.html'"
-                             style="position: absolute; top: 24px; left: 100px;"></div>
+                <span style="float:left; padding: 10px;">　~　</span>
 
-                        <!-- search input -->
-                        <input type="text" class="form-control" ng-model="search.joindate">
+                <div class="input-group input-group-sm input-group-search form-inline" searchType="joindate"
+                     style="float:left">
+                    <!-- calendar popup -->
+                    <div ng-if="showCal2" ng-include="'views/partials/sidebar/calendar.html'"
+                         style="position: absolute; top: 24px; left: 100px; z-index:100;"></div>
 
-                        <!-- button -->
+                    <!-- search input -->
+                    <input type="text" class="form-control" ng-model="search.joindate">
+
+                    <!-- button -->
                         <span class="input-group-btn">
                             <button class="btn btn-default input-group-btn-custom"
                                     type="button" ng-click="showCal2 = !showCal2;" btnType="glyphicon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </button>
                         </span>
-                    </div>
                 </div>
+            </div>
+        </td>
+        <td>
+            <input type="button" class="btn btn-style" value="검색">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!-- search ▲ -->
+<p></p>
+
+<div class="row clearfix">
+    <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
+        <thead>
+        <tr>
+            <th class="list-header-option" rowspan="2">
+                R값
+            </th>
+            <th class="list-header-option" rowspan="2">
+                MOS
+            </th>
+            <th class="list-header-option" rowspan="2">
+                Delay(ms)
+            </th>
+            <th class="list-header-option" colspan="2">
+                손상율(%)
+            </th>
+            <th class="list-header-option" colspan="2">
+                JITTER(ms)
+            </th>
+            <th class="list-header-option" rowspan="2">
+                측정<br>
+                시간(초)
+            </th>
+            <th class="list-header-option" rowspan="2">
+                응답코드
+            </th>
+        </tr>
+        <tr>
+            <th class="list-header-option">
+                TX
+            </th>
+            <th class="list-header-option">
+                RX
+            </th>
+            <th class="list-header-option">
+                TX
+            </th>
+            <th class="list-header-option">
+                RX
+            </th>
+        </tr>
+        </thead>
+        <tbody class="text-center list-contents-option">
+        <tr>
+            <td>
+                90.25
             </td>
             <td>
-                <input type="button" class="btn btn-style" value="검색">
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.16
+            </td>
+            <td>
+                15
+            </td>
+            <td>
+                200
             </td>
         </tr>
         </tbody>
     </table>
-    <!-- search ▲ -->
-<p></p>
-    <div class="row clearfix">
-        <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
-            <thead>
-            <tr>
-                <th class="list-header-option" rowspan="2">
-                    R값
-                </th>
-                <th class="list-header-option" rowspan="2">
-                    MOS
-                </th>
-                <th class="list-header-option" rowspan="2">
-                    Delay(ms)
-                </th>
-                <th class="list-header-option" colspan="2">
-                    손상율(%)
-                </th>
-                <th class="list-header-option" colspan="2">
-                    JITTER(ms)
-                </th>
-                <th class="list-header-option" rowspan="2">
-                    측정<br>
-                    시간(초)
-                </th>
-                <th class="list-header-option" rowspan="2">
-                    응답코드
-                </th>
-            </tr>
-            <tr>
-                <th class="list-header-option">
-                    TX
-                </th>
-                <th class="list-header-option">
-                    RX
-                </th>
-                <th class="list-header-option">
-                    TX
-                </th>
-                <th class="list-header-option">
-                    RX
-                </th>
-            </tr>
-            </thead>
-            <tbody class="text-center list-contents-option">
-            <tr>
-                <td>
-                    90.25
-                </td>
-                <td>
-                    4.123
-                </td>
-                <td>
-                    0.60
-                </td>
-                <td>
-                    0.00
-                </td>
-                <td>
-                    0.00
-                </td>
-                <td>
-                    0.00
-                </td>
-                <td>
-                    0.16
-                </td>
-                <td>
-                    15
-                </td>
-                <td>
-                    200
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+</div>
 
-    <div class="row clearfix">
-        <div class="pull-right">
-            <button type="button" class="btn btn-style" ng-click="">액셀 변환
-            </button>
-            <button type="button" class="btn btn-style" ng-click="">R등급 확인
+
+<!-- selector ▼ -->
+<div class="row clearfix remove-margin" ng-init="page2='list';" style="margin-top: 0">
+    <div class="tabbable" id="tabs">
+        <div class="pull-right" style="margin-bottom: 10px">
+            <button type="button" class="btn btn-style"
+                    onclick="window.open('views/contents/052_S_2130_info.r.value.threshold.html'
+                        , 'openRValue'
+                        , 'width=800, height=830, toolbar=no, menubar=no, scrollbars=no, resizable=yes')">
+                R등급 확인
             </button>
         </div>
+        <div class="pull-right" style="margin-right: 10px">
+            <button type="button" class="btn btn-style" ng-click="">엑셀 변환
+            </button>
+        </div>
+        <ul class="nav nav-tabs nav-pills" style="border-bottom: 0">
+            <li ng-class="{active:page2=='list'}" ng-click="page2='list';">
+                <a href="#/priodicR" data-taggle="tab">목록</a>
+            </li>
+            <li ng-class="{active:page2=='chart'}" ng-click="page2='chart';">
+                <a href="#/priodicR" data-taggle="tab">차트</a>
+            </li>
+        </ul>
     </div>
-
-    <input type="radio" name="aa" ng-click="change('목록')"> 목록
-    <input type="radio" name="aa" ng-click="change('차트')"> 차트
-
-    <p></p>
     <!-- list ▼ -->
-    <div ng-if="click=='목록'">
-        <div ng-include="'views/contents/052_S_2521_result.priodic.list.html'"></div>
-    </div>
-
-    <div ng-if="click=='차트'">
-        <div ng-include="'views/contents/052_S_2522_result.priodic.chart.html'"></div>
-    </div>
+    <div ng-if="page2=='list'" ng-include="'views/contents/052_S_2521_result.priodic.list.html'"></div>
     <!-- list ▲ -->
-    </div>
-    <!-- contents ▲ -->
+    <!-- chart ▼ -->
+    <div ng-if="page2=='chart'" ng-include="'views/contents/052_S_2522_result.priodic.chart.html'"></div>
+    <!-- chart ▲ -->
+</div>
+<!-- selector ▲ -->
+
+</div>
+<!-- contents ▲ -->
 </div>

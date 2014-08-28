@@ -10,31 +10,54 @@
 
     <!-- contents ▼ -->
     <div class="contents-background">
-        <div class="list-header-option ">　측정 구간 설정</div>
+
+        <!-- sub title ▼ -->
+        <div class="subtitle">
+            <img src="images/icon/bullet01.png">
+            　측정 구간 설정
+        </div>
+        <!-- sub title ▲ -->
+
         <!-- search ▼ -->
-        <table class="table tb-list remove-margin contents-center">
+        <table class="table tb-list remove-margin contents-center list-option">
             <thead>
             <tr>
-                <th class="list-header-option text-left" style="padding: 15px 0">
-                    　송신 PROBE
+                <th class="list-header-option text-center" style="padding: 13px 0; width:100px; border-bottom: 0">
+                    송신 PROBE
                 </th>
-                <td><select ng-options="" class="form-control">
-                    <option value="all">전체선택</option>
-                </select></td>
-                <th class="list-header-option text-left" style="padding: 15px 0">
-                    　수신 PROBE
+                <td>
+                    <div style="width:100%;">
+                        <div style="float:left; margin-right: 10px; width: 245px">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div style="float:left; margin:1px;">
+                            <button class="btn btn-style pull-right"
+                                    onclick="window.open('views/contents/052_S_2301_quality.check.search.probe.html','probeList','width=800,height=900')">검색</button>
+                        </div>
+                    </div>
+                </td>
+                <th class="list-header-option text-center" style="padding: 13px 0; width:100px; border-bottom: 0">
+                    수신 PROBE
                 </th>
-                <td><select ng-options="" class="form-control">
-                    <option value="all">전체선택</option>
-                </select></td>
+                <td>
+                    <div>
+                        <div style="float:left; margin-right: 10px; width: 245px">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div style="float:left; margin:1px;">
+                            <button class="btn btn-style pull-right"
+                                    onclick="window.open('views/contents/052_S_2301_quality.check.search.probe.html','probeList','width=800,height=900')">검색</button>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <th class="list-header-option text-left" style="padding: 15px 0">
-                    　송신 이용기관
+                <th class="list-header-option text-center" style="padding: 13px 0; border-bottom: 0">
+                    송신 이용기관
                 </th>
                 <td></td>
-                <th class="list-header-option text-left" style="padding: 15px 0">
-                    　수신 이용기관
+                <th class="list-header-option text-center" style="padding: 13px 0; border-bottom: 0">
+                    수신 이용기관
                 </th>
                 <td></td>
             </tr>
@@ -45,23 +68,47 @@
 
         <!-- icon info ▼ -->
         <div class="row clearfix" style="margin-top: 15px;">
-            <div class="list-header-option ">　측정정보</div>
+
+            <!-- sub title ▼ -->
+            <div class="subtitle">
+                <img src="images/icon/bullet01.png">
+                　측정 정보
+            </div>
+            <!-- sub title ▲ -->
+
             <table class="table tb-list remove-margin ">
                 <thead>
                 <tr>
                     <th class="list-header-option text-left" style="padding: 15px 0">
                         　측정 통화시간
                     </th>
-                    <td class="form-inline"><input type="text" class="form-control" style="width: 20%;height: 20px;" placeholder="">
-                        　초</td>
+                    <td>
+                        <div>
+                            <div style="float:left">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div style="float:left; margin:8px ; margin-left:15px">
+                                초
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <th class="list-header-option text-left" style="padding: 15px 0">
                         　측정자 이름 | 아이디
                     </th>
                     <td class="form-inline">
-                       <input type="text" class="form-control" style="width: 20%;height: 20px;" placeholder="운영자">　|　
-                        <input type="text" class="form-control" style="width: 20%;height: 20px;"  placeholder="admin">
+                        <div>
+                            <div style="float:left">
+                                <input type="text" class="form-control" placeholder="운영자">
+                            </div>
+
+                            <span style="margin: 3px 5px; font-size: 20px; float:left">|</span>
+
+                            <div style="float:left">
+                                <input type="text" class="form-control" placeholder="admin">
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 </thead>
@@ -69,9 +116,13 @@
         </div>
 
         <!-- icon info ▲ -->
-<p></p>
-        <div class="row clearfix list-header-option contents-center">
-            <a href="#/demand/process"  class="btn btn-style">V 측정 시작</a>
+        <p></p>
+
+        <div class="row clearfix contents-center">
+            <a href="#/demand/process" class="btn btn-style">
+                <span class="glyphicon glyphicon-ok" style="margin-right: 10px"></span>
+                측정 시작
+            </a>
         </div>
     </div>
 

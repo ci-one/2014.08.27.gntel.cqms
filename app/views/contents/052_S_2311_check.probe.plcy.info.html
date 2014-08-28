@@ -12,9 +12,14 @@
     <div class="contents-background">
 
         <!-- search ▼ -->
-        <div class="row clearfix contents-center" style="margin-top: 15px;">
-            <div class="list-header-option ">송신 PROBE 정보</div>
-            <table class="table tb-list remove-margin text-center">
+        <div class="row clearfix contents-center">
+            <!-- sub title ▼ -->
+            <div class="subtitle" style="text-align: left">
+                <img src="images/icon/bullet01.png">
+                　송신 PROBE 정보
+            </div>
+            <!-- sub title ▲ -->
+            <table class="table tb-list remove-margin text-center list-option">
                 <thead>
                 <tr>
                     <th rowspan="2" class="list-header-option text-center">
@@ -43,8 +48,13 @@
         </div>
 
         <div class="row clearfix contents-center" style="margin-top: 15px;">
-            <div class="list-header-option ">수신 대상 PROBE 목록</div>
-            <table class="table tb-list remove-margin text-center">
+            <!-- sub title ▼ -->
+            <div class="subtitle" style="text-align: left">
+                <img src="images/icon/bullet01.png">
+                　수신 대상 PROBE 목록
+            </div>
+            <!-- sub title ▲ -->
+            <table class="table tb-list remove-margin text-center list-option">
                 <thead>
                 <tr>
                     <th rowspan="2" class="list-header-option text-center">
@@ -87,11 +97,15 @@
         <div>
             <div class="row clearfix">
 
-                <div class="list-header-option ">품질측정 정책현황
-                    <button type="button" class="btn btn-style" style="margin: 5px 5px;"
+                <!-- sub title ▼ -->
+                <div class="subtitle" style="height: 39px; width:100%; ">
+                    <img src="images/icon/bullet01.png">
+                    　품질측정 정책현황
+                    <button type="button" class="btn btn-style" style="margin-left: 5px;"
                             onclick="window.open('views/contents/052_S_2312_check.rule.plcy.list.html','_blank','width=800,height=900')">추가
                     </button>
                 </div>
+                <!-- sub title ▲ -->
             </div>
             <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
                 <thead>
@@ -168,11 +182,13 @@
             <!-- list ▲ -->
 
         </div>
-        <div class="row clearfix list-header-option">
+        <div class="row clearfix">
             <div class="pull-right">
-                <button type="button" class="btn btn-warning" ng-click="">취소
+                <button type="button" class="btn btn-style" ng-click="">취소
                 </button>
-                <button type="button" class="btn btn-warning" ng-click="">v 측정시작
+                <button class="btn btn-style">
+                    <span class="glyphicon glyphicon-ok" style="margin-right: 10px"></span>
+                    측정 시작
                 </button>
             </div>
         </div>

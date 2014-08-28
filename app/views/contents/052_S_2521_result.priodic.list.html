@@ -2,16 +2,16 @@
     <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
         <thead>
         <tr>
-            <th class="list-header-option" rowspan="2">
+            <th class="list-header-option" rowspan="2" style="width:80px">
                 측정일시
             </th>
-            <th class="list-header-option" rowspan="2">
+            <th class="list-header-option" rowspan="2" style="width:120px">
                 송신 PROBE<br>(전화번호)
             </th>
-            <th class="list-header-option" rowspan="2">
+            <th class="list-header-option" rowspan="2" style="width:180px">
                 수신 PROBE<br>(전화번호)
             </th>
-            <th class="list-header-option" rowspan="2">
+            <th class="list-header-option" rowspan="2" style="width:40px">
                 측정품질
             </th>
             <th class="list-header-option" rowspan="2">
@@ -21,7 +21,7 @@
                 MOS
             </th>
             <th class="list-header-option" rowspan="2">
-                Delay(ms)
+                Delay<br />(ms)
             </th>
             <th class="list-header-option" colspan="2">
                 손실율(%)
@@ -33,10 +33,10 @@
                 측정<br>
                 시간(초)
             </th>
-            <th class="list-header-option" rowspan="2">
+            <th class="list-header-option" rowspan="2" style="width:60px">
                 측정코드
             </th>
-            <th class="list-header-option" rowspan="2">
+            <th class="list-header-option" rowspan="2" style="width:40px">
                 측정결과
             </th>
         </tr>
@@ -188,31 +188,134 @@
                 성공
             </td>
         </tr>
+        <tr>
+            <td>
+                2014.08.05 08:23:32
+            </td>
+            <td>
+                대림산업[수송용]<br>(234563)
+            </td>
+            <td>
+                07822 (김포도시철도3공구현장)<br>23456
+            </td>
+            <td>
+                최고
+            </td>
+            <td>
+                87.00
+            </td>
+            <td>
+                4.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                30
+            </td>
+            <td>
+                200
+            </td>
+            <td>
+                성공
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2014.08.05 08:23:32
+            </td>
+            <td>
+                대림산업[수송용]<br>(234563)
+            </td>
+            <td>
+                07822 (김포도시철도3공구현장)<br>23456
+            </td>
+            <td>
+                최고
+            </td>
+            <td>
+                87.00
+            </td>
+            <td>
+                4.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                30
+            </td>
+            <td>
+                200
+            </td>
+            <td>
+                성공
+            </td>
+        </tr>
         </tbody>
     </table>
 </div>
-<div class="contents-center">
-    <ul class="pagination">
+<div>
+    <ul class="list-unstyled list-inline pagenation-height text-center list-page" style="margin:0; margin-top:5px">
         <li>
-            <a href="#">Prev</a>
+            <!-- ng-class="{disabled: currentPage < 10}" -->
+            <a href="#/priodicR">
+                <span class="glyphicon glyphicon-backward"></span>
+            </a>
+        </li>
+        <li class="disabled">
+            <a href="#/priodicR">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="#/priodicR">
+                1
+            </a>
         </li>
         <li>
-            <a href="#">1</a>
+            <a href="#/priodicR">
+                2
+            </a>
         </li>
         <li>
-            <a href="#">2</a>
+            <a href="#/priodicR">
+                3
+            </a>
         </li>
         <li>
-            <a href="#">3</a>
+            <a href="#/priodicR">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
         </li>
         <li>
-            <a href="#">4</a>
-        </li>
-        <li>
-            <a href="#">5</a>
-        </li>
-        <li>
-            <a href="#">Next</a>
+            <a href="#/priodicR">
+                <span class="glyphicon glyphicon-forward"></span>
+            </a>
         </li>
     </ul>
 </div>

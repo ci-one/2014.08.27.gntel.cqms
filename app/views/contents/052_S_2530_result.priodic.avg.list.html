@@ -13,16 +13,16 @@
 <div class="contents-background">
 
 <!-- search ▼ -->
-<table class="table tb-list remove-margin contents-center">
+<table class="table tb-list remove-margin contents-center list-option">
     <tbody>
     <tr>
-        <th class="list-header-option text-center">
+        <th class="list-header-option text-center" style="padding: 15px 0">
             송신 허용기관명
         </th>
         <td>
             <input type="text" placeholder="대림산업[수송동]" class="form-control">
         </td>
-        <th class="list-header-option text-center">
+        <th class="list-header-option text-center" style="padding: 15px 0">
             수신 이용기관명
         </th>
         <td>
@@ -32,13 +32,13 @@
         </td>
     </tr>
     <tr>
-        <th class="list-header-option text-center">
+        <th class="list-header-option text-center" style="padding: 15px 0">
             송신 PROBE 전화번호
         </th>
         <td>
             <input type="text" class="form-control">
         </td>
-        <th class="list-header-option text-center">
+        <th class="list-header-option text-center" style="padding: 15px 0">
             수신 PROBE 전화번호
         </th>
         <td>
@@ -46,7 +46,7 @@
         </td>
     </tr>
     <tr>
-        <th class="list-header-option text-center">
+        <th class="list-header-option text-center" style="padding: 15px 0">
             정책ID
         </th>
         <td colspan="2">
@@ -98,16 +98,25 @@
 <!-- search ▲ -->
 <p></p>
 
-<div class="row clearfix list-header-option">
-    <span style="">결과대상 :: 측정성공(측정코드:200)한 값</span>
-
-    <div class="pull-right">
+<!-- sub title ▼ -->
+<div class="subtitle" style="margin-top: 10px ;height: 39px; width:100%; ">
+    <div style="float:left; padding: 6px 0">
+        <img src="images/icon/bullet01.png">
+        　결과대상 :: 측정성공(측정코드:200)한 값
+    </div>
+    <div style="float:left" class="pull-right">
         <button type="button" class="btn btn-style" ng-click="">액셀 변환
         </button>
-        <button type="button" class="btn btn-style" ng-click="">R등급 확인
+        <button type="button" class="btn btn-style"
+                onclick="window.open('views/contents/052_S_2130_info.r.value.threshold.html'
+                        , 'openRValue'
+                        , 'width=800, height=830, toolbar=no, menubar=no, scrollbars=no, resizable=yes')">
+            R등급 확인
         </button>
     </div>
 </div>
+<!-- sub title ▲ -->
+
 <div class="row clearfix contents-center">
     <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
         <thead>
@@ -124,10 +133,10 @@
             <th class="list-header-option" rowspan="2">
                 Delay(ms)
             </th>
-            <th class="list-header-option" colspan="2">
+            <th class="list-header-option" colspan="2" style="border-bottom: 1px">
                 손상율(%)
             </th>
-            <th class="list-header-option" colspan="2">
+            <th class="list-header-option" colspan="2" style="border-bottom: 1px">
                 JITTER(ms)
             </th>
 
@@ -228,6 +237,58 @@
         </tr>
         <tr>
             <td>
+                6526542 [김포도시철도3공구현장]
+            </td>
+            <td>
+                87.67
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.25
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6526542 [김포도시철도3공구현장]
+            </td>
+            <td>
+                87.67
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.25
+            </td>
+        </tr>
+        <tr>
+            <td>
                 1635256 [김포도시철도2공구현장]
             </td>
             <td>
@@ -278,31 +339,256 @@
                 0.1
             </td>
         </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3643544 [김포도시철도1공구현장]
+            </td>
+            <td>
+                89.2
+            </td>
+            <td>
+                4.123
+            </td>
+            <td>
+                0.60
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.00
+            </td>
+            <td>
+                0.1
+            </td>
+        </tr>
         </tbody>
     </table>
-    <ul class="pagination">
-        <li>
-            <a href="#">Prev</a>
-        </li>
-        <li>
-            <a href="#">1</a>
-        </li>
-        <li>
-            <a href="#">2</a>
-        </li>
-        <li>
-            <a href="#">3</a>
-        </li>
-        <li>
-            <a href="#">4</a>
-        </li>
-        <li>
-            <a href="#">5</a>
-        </li>
-        <li>
-            <a href="#">Next</a>
-        </li>
-    </ul>
+    <div>
+        <ul class="list-unstyled list-inline pagenation-height text-center list-page" style="margin:0; padding:0">
+            <li>
+                <!-- ng-class="{disabled: currentPage < 10}" -->
+                <a href="#/priodicavg">
+                    <span class="glyphicon glyphicon-backward"></span>
+                </a>
+            </li>
+            <li class="disabled">
+                <a href="#/priodicavg">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#/priodicavg">
+                    1
+                </a>
+            </li>
+            <li>
+                <a href="#/priodicavg">
+                    2
+                </a>
+            </li>
+            <li>
+                <a href="#/priodicavg">
+                    3
+                </a>
+            </li>
+            <li>
+                <a href="#/priodicavg">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#/priodicavg">
+                    <span class="glyphicon glyphicon-forward"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div class="row clearfix">

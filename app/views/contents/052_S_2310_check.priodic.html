@@ -10,9 +10,13 @@
 
 <!-- contents ▼ -->
 <div class="contents-background">
-<div class="list-header-option ">송신 PROBE 연결 상태</div>
 <!-- search ▼ -->
-<table class="table tb-list remove-margin contents-center">
+<table class="table tb-list remove-margin contents-center list-option">
+    <thead>
+    <tr>
+        <th class="list-header-option" style="text-align: left">송신 PROBE 연결 상태</th>
+    </tr>
+    </thead>
     <tbody>
     <tr>
         <td colspan="5">
@@ -56,7 +60,7 @@
 
 <!-- icon info ▼ -->
 <div class="row clearfix contents-center" style="margin-top: 15px;">
-    <table class="table tb-list remove-margin text-center">
+    <table class="table tb-list remove-margin text-center list-option">
         <thead>
         <tr>
             <th rowspan="2" class="list-header-option text-center">
@@ -93,60 +97,61 @@
         <ul class="list-unstyled list-inline pagenation-height text-center list-page" style="margin-top:5px">
             <li>
                 <!-- ng-class="{disabled: currentPage < 10}" -->
-                <a href="">
+                <a href="#/priodic">
                     <span class="glyphicon glyphicon-backward"></span>
                 </a>
             </li>
             <li class="disabled">
-                <a href="">
+                <a href="#/priodic">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </li>
             <li class="active">
-                <a href="">
+                <a href="#/priodic">
                     1
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#/priodic">
                     2
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#/priodic">
                     3
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#/priodic">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#/priodic">
                     <span class="glyphicon glyphicon-forward"></span>
                 </a>
             </li>
         </ul>
     </div>
 </div>
-
 <!-- icon info ▲ -->
 
-<div class="row clearfix">
-
-    <div class="list-contents-active">수신 PROBE 목록
-        <button type="button" class="btn btn-style" style="margin: 5px 5px;" ng-click="">추가
-        </button>
-        <button type="button" class="btn btn-style" ng-click="">삭제
-        </button>
-    </div>
+<!-- sub title ▼ -->
+<div class="subtitle" style="height: 39px; width:100%; ">
+    <img src="images/icon/bullet01.png">
+    　수신 PROBE 목록
+    <button type="button" class="btn btn-style" style="margin-left: 15px"
+            onclick="window.open('views/contents/052_S_2301_quality.check.search.probe.html','probeList','width=800,height=900')">추가
+    </button>
+    <button type="button" class="btn btn-style" ng-click="">삭제
+    </button>
 </div>
+<!-- sub title ▲ -->
 
 <!-- list ▼ -->
 <link rel="stylesheet" href="styles/layout/contents.css">
 
-<div style="overflow-y: scroll;">
+<div style="overflow-y: scroll; height: 500px">
     <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
         <thead>
         <tr>

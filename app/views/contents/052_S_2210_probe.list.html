@@ -8,161 +8,158 @@
 <!-- title ▲ -->
 
 <!-- contents ▼ -->
-<div class="contents-background contents-center" ng-controller="">
+<div class="contents-background contents-center" style="padding: 5px">
 
-    <!-- search ▼ -->
+<!-- search ▼ -->
+<div>
+    <table class="table tb-list remove-margin contents-center">
+        <tbody>
+        <tr>
+            <th class="list-header-option text-center" style="padding: 18px 0">이용기관명</th>
+            <td><input type="text" ng-model="search.dutyname" class="form-control"></td>
+            <th class="list-header-option text-center" style="padding: 18px 0">PROBE 전화번호</th>
+            <td><input type="text" ng-model="search.memberid" class="form-control"></td>
+            <td rowspan="2" class="list-header-option">
+                <button class="btn btn-style" style="margin-top:30px" ng-click="trySearch()">검색</button>
+            </td>
+        </tr>
+        <tr>
+            <th class="list-header-option text-center" style="padding: 18px 0">PROBE 이름</th>
+            <td><input type="text" ng-model="search.start" class="form-control"></td>
+            <th class="list-header-option text-center" style="padding: 18px 0">사용 여부</th>
+            <td>
+                <select ng-model="inputData['useyn']" class="form-control">
+                    <option value="Y">사용함</option>
+                    <option value="N">사용안함</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <ul class="list-unstyled list-inline">
+                    <li class="pull-right" ng-init="state='Y'; add=false;">
+                        <img src="images/icon/probe_06.png" style="width:18px" alt="best"/>
+                        : 착신 통화중
+
+                    </li>
+                    <li class="pull-right" ng-init="state='Y'; add=false;">
+                        <img src="images/icon/probe_05.png" style="width:18px" alt="best"/>
+                        : 측정 수행중
+                    </li>
+
+                    <li class="pull-right" ng-init="state='Y'; add=false;">
+                        <img src="images/icon/probe_04.png" style="width:18px" alt="best"/>
+                        : 측정기능/스케줄러 중지
+                    </li>
+                    <li class="pull-right" ng-init="state='Y'; add=false;">
+                        <img src="images/icon/probe_03.png" style="width:18px" alt="best"/>
+                        :측정대기/진행
+                    </li>
+                    <li class="pull-right" ng-init="state='Y'; add=false;">
+                        <img src="images/icon/probe_02.png" style="width:18px" alt="best"/>
+                        :연결끊김
+                    </li>
+                    <li class="pull-right" ng-init="state='Y'; add=false;">
+                        <img src="images/icon/probe_01.png" style="width:18px" alt="best"/>
+                        :등록, 수신전용
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+</div>
+<!-- search ▲ -->
+
+<!-- list ▼ -->
+<div style="margin-top:10px;">
+    <table class="table tb-list table-bordered list-option">
+        <thead>
+        <tr class="list-header-option">
+            <th>
+                이용기관명
+            </th>
+            <th>
+                PROBE 명
+            </th>
+            <th>
+                전화번호
+            </th>
+            <th>
+                담당자명
+            </th>
+            <th>
+                PROBE상태
+            </th>
+            <th>
+                스케쥴러 상태
+            </th>
+
+        </tr>
+        <tr>
+            <td>07822(김포도시철도3공구현장)</td>
+            <td>07822(김포도시철도3공구현장)</td>
+            <td>07822</td>
+            <td>.</td>
+            <td><img src="images/icon/probe_01.png" style="width:22px" alt="best"/></td>
+            <td><img src="images/icon/probe_03.png" style="width:22px" alt="best"/></td>
+        </tr>
+        </thead>
+        <tbody class="text-center list-contents-option">
+        <tr ng-repeat="item in filterItems= (items | orderBy:ordering())"
+            ng-if="currentPage*itemsPerPage <= $index && $index < (currentPage+1)*itemsPerPage">
+            <td>{{item['dutyname']}}</td>
+            <td>{{item['memberid']}}</td>
+            <td>{{item['useperiod']}}</td>
+            <td>{{item['comtel']}}</td>
+            <td>{{item['logincnt']}}회</td>
+            <td>{{item['logindate']}}</td>
+            <td>{{item['joindate']}}</td>
+        </tr>
+        </tbody>
+    </table>
+
     <div>
-        <table class="table tb-list remove-margin contents-center">
-            <tbody>
-            <tr>
-                <th class="list-header-option">이용기관명</th>
-                <td><input type="text" ng-model="search.dutyname"></td>
-                <th class="list-header-option">PROBE 전화번호</th>
-                <td><input type="text" ng-model="search.memberid"></td>
-                <td rowspan="2" class="list-header-option">
-                    <button class="btn btn-default" style="margin-top:10px" ng-click="trySearch()">검색</button>
-                </td>
-            </tr>
-            <tr>
-                <th class="list-header-option">PROBE 이름</th>
-                <td><input type="text" ng-model="search.start"></td>
-                <th class="list-header-option">사용 여부</th>
-                <td>
-                    <select ng-model="inputData['useyn']">
-                        <option value="Y">사용함</option>
-                        <option value="N">사용안함</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="5">
-                    <ul class="list-unstyled list-inline">
-                        <li class="pull-right" ng-init="state='Y'; add=false;">
-                            <img src="images/icon/probe_06.png" style="width:25px" alt="best"/>
-                            : 착신 통화중
-
-                        </li>
-                        <li class="pull-right" ng-init="state='Y'; add=false;">
-                            <img src="images/icon/probe_05.png" style="width:25px" alt="best"/>
-                            : 측정 수행중
-                        </li>
-
-                        <li class="pull-right" ng-init="state='Y'; add=false;">
-                            <img src="images/icon/probe_04.png" style="width:25px" alt="best"/>
-                            : 측정기능/스케줄러 중지
-                        </li>
-                        <li class="pull-right" ng-init="state='Y'; add=false;">
-                            <img src="images/icon/probe_03.png" style="width:25px" alt="best"/>
-                            :측정대기/진행
-                        </li>
-                        <li class="pull-right" ng-init="state='Y'; add=false;">
-                            <img src="images/icon/probe_02.png" style="width:25px" alt="best"/>
-                            :연결끊김
-                        </li>
-                        <li class="pull-right" ng-init="state='Y'; add=false;">
-                            <img src="images/icon/probe_01.png" style="width:25px" alt="best"/>
-                            :등록, 수신전용
-                        </li>
-                    </ul>
-
-
-                </td>
-
-            </tr>
-
-
-            <tbody>
-
-            </tbody>
-        </table>
-
-    </div>
-    <!-- search ▲ -->
-
-    <!-- list ▼ -->
-    <div style="margin-top:15px;">
-        <table class="table tb-list table-bordered list-option">
-            <thead>
-            <tr class="list-header-option">
-                <th>
-                    <!-- <a href="" ng-click="toggleOrder('name')">
-                         선택 {{orderbyDesc['dutyname']?'▼':'▲'}}
-                     </a>-->
-                    이용기관명
-                </th>
-                <th>
-                    <!-- <a href="" ng-click="toggleOrder('id')">
-                            정책ID {{orderbyDesc['memberid']?'▼':'▲'}}
-                        </a>-->
-                    PROBE 명
-                </th>
-                <th>
-                    전화번호
-                </th>
-                <th>
-                    담당자명
-                </th>
-                <th>
-                    PROBE상태
-                </th>
-                <th>
-                    스케쥴러 상태
-                </th>
-
-            </tr>
-            <tr> <td>07822(김포도시철도3공구현장)</td>
-                 <td>07822(김포도시철도3공구현장)</td>
-                 <td>07822</td>
-                 <td>.</td>
-                 <td> <img src="images/icon/probe_01.png" style="width:25px" alt="best"/></td>
-                 <td> <img src="images/icon/probe_03.png" style="width:25px" alt="best"/></td>
-            </tr>
-            </thead>
-            <tbody class="text-center list-contents-option">
-            <tr ng-repeat="item in filterItems= (items | orderBy:ordering())"
-                ng-if="currentPage*itemsPerPage <= $index && $index < (currentPage+1)*itemsPerPage">
-                <td>{{item['dutyname']}}</td>
-                <td>{{item['memberid']}}</td>
-                <td>{{item['useperiod']}}</td>
-                <td>{{item['comtel']}}</td>
-                <td>{{item['logincnt']}}회</td>
-                <td>{{item['logindate']}}</td>
-                <td>{{item['joindate']}}</td>
-            </tr>
-            </tbody>
-        </table>
-
-        <ul class="list-unstyled list-inline pagenation-height text-center list-page">
+        <ul class="list-unstyled list-inline pagenation-height text-center list-page" style="margin:4px 0">
             <li>
                 <!-- ng-class="{disabled: currentPage < 10}" -->
-                <a href="" ng-click="prev10Page()">
+                <a href="#/probe/list">
                     <span class="glyphicon glyphicon-backward"></span>
                 </a>
             </li>
-            <li ng-class="{disabled: currentPage == 0}">
-                <a href="" ng-click="prevPage()">
+            <li class="disabled">
+                <a href="#/probe/list">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </li>
-            <li ng-repeat="n in range(currentPage-2, currentPage+3)"
-                ng-class="{active: n == currentPage}"
-                ng-click="setPage()">
-                <a href="" ng-bind="n + 1"></a>
+            <li class="active">
+                <a href="#/probe/list">
+                    1
+                </a>
             </li>
-            <li ng-class="{disabled: (getPageMax() == 0 || currentPage == getPageMax() - 1)}">
-                <a href="" ng-click="nextPage()">
+            <li>
+                <a href="#/probe/list">
+                    2
+                </a>
+            </li>
+            <li>
+                <a href="#/probe/list">
+                    3
+                </a>
+            </li>
+            <li>
+                <a href="#/probe/list">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </li>
             <li>
-                <!-- ng-class="{disabled: (getPageMax() == 0 || currentPage > getPageMax() - 11)}" -->
-                <a href="" ng-click="next10Page()">
+                <a href="#/probe/list">
                     <span class="glyphicon glyphicon-forward"></span>
                 </a>
             </li>
         </ul>
     </div>
-    <div class="row">
+    <div class="row" style="margin-bottom: 10px">
         <ul class="list-unstyled list-inline">
             <li class="pull-right" ng-init="state='Y'; add=false;">
                 <button class="btn btn-style" ng-if="tabPage != '전체'" ng-click="action()">{{tabPage=='Y'?
@@ -202,7 +199,7 @@
                         , 'openRValue'
                         , 'width=800, height=250, toolbar=no, menubar=no, scrollbars=no, resizable=yes')">
                         기본값 설정
-                   </button>
+                    </button>
 
 
                 </td>

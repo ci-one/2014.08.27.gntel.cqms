@@ -1,135 +1,195 @@
-<link rel="stylesheet" href="../../../styles/layout/contents.css" xmlns="http://www.w3.org/1999/html">
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>R등급 확인[R값 임계치 확인]</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(app) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout/contents.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="gntelCqmsApp" ng-controller="">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-<div class="contents-layout" ng-controller="">
-<!-- title ▼ -->
-<div class="title-option">
-    　　　품질 측정-PROBE 목록
-</div>
-<!-- title ▲ -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
 
+<!-- Add your site or application content here -->
 <!-- contents ▼ -->
-<div class="contents-background contents-center" ng-controller="">
 
-    <!-- search ▼ -->
-    <div>
-        <table class="table tb-list remove-margin contents-center">
-            <tbody>
-            <tr>
-                <th class="list-header-option">이용 기관명</th>
-                <td>
-                    <select style="width: 100%">
-                        <option value="" selected>기관선택</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                    </select>
-                </td>
-                <th class="list-header-option">PROBE 전화번호</th>
-                <td><input type="text" size="20px" ng-model="search.dutyname"></td>
-                <td rowspan="2" class="list-header-option">
-                    <button class="btn btn-style" style="margin-top:10px" ng-click="trySearch()">검색</button>
-                </td>
-            </tr>
-            <tr>
-                <th class="list-header-option">PROBE 이름</th>
-                <td colspan="3" style="text-align:left">
-                    <input type="text">
-               </td>
-            </tr>
-            <tbody>
+<div class="contents-layout">
+    <!-- title ▼ -->
+    <div class="title-option">
+        　　　품질 측정-PROBE 목록
+    </div>
+    <!-- title ▲ -->
 
-            </tbody>
-        </table>
-        <div class="row" style="margin-top:15px">
+    <!-- contents ▼ -->
+    <div class="contents-background contents-center" ng-controller="">
+
+        <!-- search ▼ -->
+        <div>
+            <table class="table tb-list remove-margin contents-center list-option">
+                <tbody>
+                <tr>
+                    <th class="list-header-option text-center" style="padding: 15px 0">이용 기관명</th>
+                    <td>
+                        <select class="form-control" style="width:280px">
+                            <option value="" selected>기관선택</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                    </td>
+                    <th class="list-header-option text-center" style="padding: 15px 0">PROBE 전화번호</th>
+                    <td><input type="text" ng-model="search.dutyname" class="form-control"></td>
+                    <td rowspan="2" class="list-header-option" style="padding: 15px 0">
+                        <button class="btn btn-style" style="margin-top:10px" ng-click="trySearch()">검색</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="list-header-option text-center" style="padding: 15px 0">PROBE 이름</th>
+                    <td colspan="3" style="text-align:left">
+                        <input type="text" class="form-control">
+                    </td>
+                </tr>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="row" style="margin-top:15px">
+                <ul class="list-unstyled list-inline">
+                    <li class="pull-right" ng-init="state='Y'; add=false;">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- search ▲ -->
+
+        <!-- list ▼ -->
+        <div style="margin-top:15px;">
+            <table class="table tb-list table-bordered list-option">
+                <thead>
+                <tr class="list-header-option">
+                    <th>
+                        이용기관명
+                    </th>
+                    <th>
+                        PROBE 명
+                    </th>
+                    <th>
+                        PROBE 전화번호
+                    </th>
+                    <th>
+                        연결 상태
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>대림산업[수송동]</td>
+                    <td>대림산업[수송동]</td>
+                    <td>08998</td>
+                    <td><img src="images/icon/probe_03.png" style="width:25px" alt="best"/></td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                <ul class="list-unstyled list-inline pagenation-height text-center list-page" style="margin:4px 0">
+                    <li>
+                        <!-- ng-class="{disabled: currentPage < 10}" -->
+                        <a href="views/contents/052_S_2301_quality.check.search.probe.html">
+                            <span class="glyphicon glyphicon-backward"></span>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="views/contents/052_S_2301_quality.check.search.probe.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="views/contents/052_S_2301_quality.check.search.probe.html">
+                            1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="views/contents/052_S_2301_quality.check.search.probe.html">
+                            2
+                        </a>
+                    </li>
+                    <li>
+                        <a href="views/contents/052_S_2301_quality.check.search.probe.html">
+                            3
+                        </a>
+                    </li>
+                    <li>
+                        <a href="views/contents/052_S_2301_quality.check.search.probe.html">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="views/contents/052_S_2301_quality.check.search.probe.html">
+                            <span class="glyphicon glyphicon-forward"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
             <ul class="list-unstyled list-inline">
                 <li class="pull-right" ng-init="state='Y'; add=false;">
-
+                    <button class="btn btn-style" ng-if="tabPage != '전체'" ng-click="action()">{{tabPage=='Y'?
+                        '사용안함':'사용함'}}
+                    </button>
+                    <button class="btn btn-style" ng-click="tryAdd();">사용 안함</button>
+                    <button class="btn btn-style" ng-click="tryAdd();">추가</button>
                 </li>
             </ul>
         </div>
+        <!-- list ▲ -->
     </div>
-    <!-- search ▲ -->
+    <!-- contents ▲ -->
 
-    <!-- list ▼ -->
-    <div style="margin-top:15px;">
-        <table class="table tb-list table-bordered list-option">
-            <thead>
-            <tr class="list-header-option">
-                <th>
-                    이용기관명
-                </th>
-                <th>
-                    PROBE 명
-                </th>
-                <th>
-                    PROBE 전화번호
-                </th>
-                <th>
-                    연결 상태
-                </th>
-            </tr>
-            <tr>
-                <td>대림산업[수송동]</td>
-                <td>대림산업[수송동]</td>
-                <td>08998</td>
-                <td><img src="images/icon/probe_03.png" style="width:25px" alt="best"/></td>
-            </tr>>
-            </thead>
-            <tbody class="text-center list-contents-option">
-            <tr ng-repeat="item in filterItems= (items | orderBy:ordering())"
-                ng-if="currentPage*itemsPerPage <= $index && $index < (currentPage+1)*itemsPerPage">
-                <td>{{item['dutyname']}}</td>
-                <td>{{item['memberid']}}</td>
-                <td>{{item['useperiod']}}</td>
-                <td>{{item['comtel']}}</td>
-                <td>{{item['logincnt']}}회</td>
-                <td>{{item['logindate']}}</td>
-                <td>{{item['joindate']}}</td>
-            </tr>
-            </tbody>
-        </table>
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-        <ul class="list-unstyled list-inline pagenation-height text-center list-page">
-            <li>
-                <!-- ng-class="{disabled: currentPage < 10}" -->
-                <a href="" ng-click="prev10Page()">
-                    <span class="glyphicon glyphicon-backward"></span>
-                </a>
-            </li>
-            <li ng-class="{disabled: currentPage == 0}">
-                <a href="" ng-click="prevPage()">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-            </li>
-            <li ng-repeat="n in range(currentPage-2, currentPage+3)"
-                ng-class="{active: n == currentPage}"
-                ng-click="setPage()">
-                <a href="" ng-bind="n + 1"></a>
-            </li>
-            <li ng-class="{disabled: (getPageMax() == 0 || currentPage == getPageMax() - 1)}">
-                <a href="" ng-click="nextPage()">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </li>
-            <li>
-                <!-- ng-class="{disabled: (getPageMax() == 0 || currentPage > getPageMax() - 11)}" -->
-                <a href="" ng-click="next10Page()">
-                    <span class="glyphicon glyphicon-forward"></span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="row">
-        <ul class="list-unstyled list-inline">
-            <li class="pull-right" ng-init="state='Y'; add=false;">
-                <button class="btn btn-style" ng-if="tabPage != '전체'" ng-click="action()">{{tabPage=='Y'?
-                    '사용안함':'사용함'}}
-                </button>
-                <button class="btn btn-style" ng-click="tryAdd();">사용 안함</button>
-                <button class="btn btn-style" ng-click="tryAdd();">추가</button>
-            </li>
-        </ul>
-    </div>
-    <!-- list ▲ -->
-</div>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
 
