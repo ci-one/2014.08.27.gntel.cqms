@@ -1,0 +1,59 @@
+
+.btn-style{
+  .btn-st1(@btn-bg-color,@gradient-color);
+}
+.btn-base{
+  .button;
+  background:#e0e0e0;
+  background-color: #e0e0e0 !important;
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#eb4646", endColorstr="#930f0f");
+  background-image: -khtml-gradient(linear, left top, left bottom, lighten(#e0e0e0,10%), to(#e0e0e0));
+  background-image: -moz-linear-gradient(top, lighten(#e0e0e0,10%), #e0e0e0);
+  background-image: -ms-linear-gradient(top, lighten(#e0e0e0,10%), #e0e0e0);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(#e0e0e0,10%)), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, lighten(#e0e0e0,10%), #e0e0e0);
+  background-image: -o-linear-gradient(top, lighten(#e0e0e0,10%), #e0e0e0);
+  background-image: linear-gradient(lighten(#e0e0e0,10%), #e0e0e0);
+  border-color: #e0e0e0 #e0e0e0 darken(#e0e0e0,20%);
+  color: #6c6c6c !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+.btn-st1(@btn-bg-color:#fff ,@gradient-color:#fff) {
+  .button;
+  background-color: @btn-bg-color !important;
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#eb4646", endColorstr="@btn-bg-color");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(@gradient-color), to(@btn-bg-color));
+  background-image: -moz-linear-gradient(top,@gradient-color , @btn-bg-color);
+  background-image: -ms-linear-gradient(top,@gradient-color , @btn-bg-color);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @gradient-color), color-stop(100%, @btn-bg-color));
+  background-image: -webkit-linear-gradient(top, @gradient-color, @btn-bg-color);
+  background-image: -o-linear-gradient(top, @gradient-color, @btn-bg-color);
+  background-image: linear-gradient(@gradient-color, @btn-bg-color);
+  border-color: lighten(@btn-bg-color,10%) @btn-bg-color darken(@btn-bg-color,10%);
+  color: #fff !important;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.46);
+}
+
+.button{
+  box-shadow: 2px 2px 5px #62615;
+
+}
+
+/*
+.btn-st1{
+  .btn-base(@btn-bg-color,@btn-border-color);
+  border: 1px solid darken(@btn-bg-color,20%);
+  &:hover{
+    color: white;
+    background:darken(@btn-bg-color,10%);
+    border: 1px solid @btn-border-color;
+  }
+}
+*/
+

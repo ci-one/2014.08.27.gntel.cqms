@@ -101,10 +101,13 @@
                 <div class="subtitle" style="height: 39px; width:100%; ">
                     <img src="images/icon/bullet01.png">
                     　품질측정 정책현황
-                    <button type="button" class="btn btn-style" style="margin-left: 5px;"
-                            onclick="window.open('views/contents/052_S_2312_check.rule.plcy.list.html','_blank','width=800,height=900')">추가
-                    </button>
-                </div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-style" style="margin-left: 5px;"
+                                onclick="window.open('views/contents/052_S_2312_check.rule.plcy.list.html','_blank','width=800,height=900')">추가
+                        </button>
+                        <button type="button" class="btn btn-base" ng-click="">삭제
+                        </button>
+                    </div>
                 <!-- sub title ▲ -->
             </div>
             <table class="table tb-list table-hover table-condensed table-bordered list-option text-center">
@@ -184,7 +187,7 @@
         </div>
         <div class="row clearfix">
             <div class="pull-right">
-                <button type="button" class="btn btn-style" ng-click="">취소
+                <button type="button" class="btn btn-base" ng-click="">취소
                 </button>
                 <button class="btn btn-style">
                     <span class="glyphicon glyphicon-ok" style="margin-right: 10px"></span>

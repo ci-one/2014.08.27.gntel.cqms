@@ -31,15 +31,16 @@
     　　　　기본값 설정
 </div>
 <div class="contents-background contents-center" ng-controller="">
+
     <table class="table tb-list remove-margin contents-center list-option">
         <tbody>
         <thead>
         <tr class="list-header-option list-option">
-            <th class="">
+            <th>
                 기본값 명
             </th>
 
-            <th >
+            <th>
                 기본값
             </th>
         </tr>
@@ -52,10 +53,15 @@
             <th class="list-header-option">PROBE 측정 대기시간(초)</th>
             <td><input type="text" ng-model="search.start"></td>
         </tr>
+
         <tbody>
         </tbody>
     </table>
 
+    <div class="row pull-right"style="margin-top:30px">
+        <button class="btn btn-style">확 인</button>
+        <button class="btn btn-base">취 소</button>
+    </div>
 </div>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>

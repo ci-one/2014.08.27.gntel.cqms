@@ -1,4 +1,15 @@
 /*
+.btn-st1{
+  .btn-base(@btn-bg-color,@btn-border-color);
+  border: 1px solid darken(@btn-bg-color,20%);
+  &:hover{
+    color: white;
+    background:darken(@btn-bg-color,10%);
+    border: 1px solid @btn-border-color;
+  }
+}
+*/
+/*
 
 //레드
 //사이드 메뉴 색상
@@ -47,6 +58,7 @@
 
 @sub-title:@blue;
 @bg-title:@basic-bg;
+
 */
 /*
 @side-top-color : @olive;
@@ -72,25 +84,54 @@
 @sub-title:@olive;
 @bg-title:@blue-bg;
 */
-.default {
-  box-shadow: 2px 2px 5px #62615f;
-}
 .btn-style {
-  color: white;
-  background-color: #0a3142;
-  border: 5px outset #456770;
-  border: 1px solid #000000;
-  box-shadow: 2px 2px 5px #62615f;
+  box-shadow: 2px 2px 5px #62615;
+  background-color: #0a3142 !important;
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#eb4646", endColorstr="@btn-bg-color");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#456770), to(#0a3142));
+  background-image: -moz-linear-gradient(top, #456770, #0a3142);
+  background-image: -ms-linear-gradient(top, #456770, #0a3142);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #456770), color-stop(100%, #0a3142));
+  background-image: -webkit-linear-gradient(top, #456770, #0a3142);
+  background-image: -o-linear-gradient(top, #456770, #0a3142);
+  background-image: linear-gradient(#456770, #0a3142);
+  border-color: #11526e #0a3142 #031016;
+  color: #fff !important;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.46);
 }
-.btn-style:hover {
-  color: white;
-  border: 5px inset #456770;
+.btn-base {
+  box-shadow: 2px 2px 5px #62615;
+  background: #e0e0e0;
+  background-color: #e0e0e0 !important;
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#eb4646", endColorstr="#930f0f");
+  background-image: -khtml-gradient(linear, left top, left bottom, #fafafa, to(#e0e0e0));
+  background-image: -moz-linear-gradient(top, #fafafa, #e0e0e0);
+  background-image: -ms-linear-gradient(top, #fafafa, #e0e0e0);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(top, #fafafa, #e0e0e0);
+  background-image: -o-linear-gradient(top, #fafafa, #e0e0e0);
+  background-image: linear-gradient(#fafafa, #e0e0e0);
+  border-color: #e0e0e0 #e0e0e0 #adadad;
+  color: #6c6c6c !important;
+  -webkit-font-smoothing: antialiased;
 }
-.btn-style:hover {
-  color: white;
-  background: #031016;
-  border: 1px solid #456770;
+.button {
+  box-shadow: 2px 2px 5px #62615;
 }
+/*
+.btn-st1{
+  .btn-base(@btn-bg-color,@btn-border-color);
+  border: 1px solid darken(@btn-bg-color,20%);
+  &:hover{
+    color: white;
+    background:darken(@btn-bg-color,10%);
+    border: 1px solid @btn-border-color;
+  }
+}
+*/
 .title-option {
   color: white;
   font-size: 150%;
@@ -102,49 +143,8 @@
   z-index: 1000;
   padding-left: 60% !important;
 }
-.btn-red {
-  background-color: #941010 !important;
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#eb4646", endColorstr="#930f0f");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#eb4646), to(#930f0f));
-  background-image: -moz-linear-gradient(top, #eb4646, #930f0f);
-  background-image: -ms-linear-gradient(top, #eb4646, #930f0f);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eb4646), color-stop(100%, #930f0f));
-  background-image: -webkit-linear-gradient(top, #eb4646, #930f0f);
-  background-image: -o-linear-gradient(top, #eb4646, #930f0f);
-  background-image: linear-gradient(#eb4646, #930f0f);
-  border-color: #930f0f #930f0f #730c0c;
-  color: #fff !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.46);
-  -webkit-font-smoothing: antialiased;
-}
-.btn-write {
-  background-color: #fa9999 !important;
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#104164164", endColorstr="#f99999");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#104164 164), to(#f99999));
-  background-image: -moz-linear-gradient(top, #104164 164, #f99999);
-  background-image: -ms-linear-gradient(top, #104164 164, #f99999);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #104164 164), color-stop(100%, #f99999));
-  background-image: -webkit-linear-gradient(top, #104164 164, #f99999);
-  background-image: -o-linear-gradient(top, #104164 164, #f99999);
-  background-image: linear-gradient(#104164 164, #f99999);
-  border-color: #f99999 #f99999 #f76666;
-  color: #333 !important;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.69);
-  -webkit-font-smoothing: antialiased;
-}
-.pills > li {
-  float: left;
-}
-.pills > li + li {
-  margin-left: 2px;
-}
-.pills > li.active > a,
-.pills > li.active > a:hover,
-.pills > li.active > a:focus {
-  padding: 6px 12px;
-  background-color: #0a3142;
+.area-margin {
+  margin-bottom: 25px;
 }
 div > .contents {
   font-size: 12px;
@@ -375,21 +375,26 @@ table > tbody > tr > td {
   padding-top: 15px;
   padding-right: 8px;
 }
-.btn-st1 {
-  color: white;
-  background-color: #0a3142;
-  border: 5px outset #456770;
-  border: 1px solid #000000;
+/*.btn-st1{
+  .btn-base(@btn-bg-color,@btn-border-color);
+  border: 1px solid darken(@btn-bg-color,20%);
+  &:hover{
+    color: white;
+    background:darken(@btn-bg-color,10%);
+    border: 1px solid @btn-border-color;
+  }
 }
-.btn-st1:hover {
+
+
+.btn-base(@bgcolor:darkred, @bodercolor :#ac2925) {
   color: white;
-  border: 5px inset #456770;
-}
-.btn-st1:hover {
-  color: white;
-  background: #031016;
-  border: 1px solid #456770;
-}
+  background-color: @bgcolor;
+  border: 5px outset @bodercolor;
+  &:hover{
+    color: white;
+    border: 5px inset @btn-border-color;
+  }
+}*/
 .pagenation-remove-margin {
   margin: 0;
 }
@@ -398,12 +403,11 @@ table > tbody > tr > td {
   height: 26px;
   padding: 3px;
 }
-
 .glyphicon-arrow-up {
-    color:red;
+  color: red;
 }
 .glyphicon-arrow-down {
-    color:blue;
+  color: blue;
 }
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
