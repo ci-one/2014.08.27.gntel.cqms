@@ -1,13 +1,13 @@
-<link rel="stylesheet" href="../../../styles/layout/contents.css" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" href="styles/layout/contents.css" xmlns="http://www.w3.org/1999/html">
 
-<div class="contents-layout" ng-controller="">
+<div class="contents-layout">
 
     <!-- contents ▼ -->
-    <div class="contents-background contents-center" ng-controller="">
+    <div class="contents-background contents-center">
 
         <!-- search ▼ -->
         <div>
-            <table class="table tb-list remove-margin contents-center table-left">
+            <table class="table tb-list remove-margin contents-center table-left list-option">
                 <tbody>
                 <tr>
                     <td>기본 설정<a href="#/probe/setting" target="_blank">기본값</a></td>
@@ -17,9 +17,10 @@
                 <tr>
                     <th class="list-header-option">PROBE 전화번호</th>
                     <td colspan="3">
-                        <input type="text">-
-                        <input type="text">
-                        <button class="btn-style">중복확인</button>
+                        <input type="text" class="form-control" style="float:left">
+                        -
+                        <input type="text" class="form-control" style="float:left">
+                        <button class="btn btn-style">중복확인</button>
                     </td>
 
                 </tr>
@@ -41,7 +42,7 @@
                     <th class="list-header-option">이용기관명</th>
                     <td colspan="3">
                         <select>
-                            <option value=""  selected>기간선택</option>
+                            <option value="" selected>기간선택</option>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
@@ -78,7 +79,7 @@
                     <th class="list-header-option">오디오 샘플파일</th>
                     <td>
                         <select>
-                            <option value=""  selected>유형 설정</option>
+                            <option value="" selected>유형 설정</option>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
@@ -89,7 +90,7 @@
                     <th class="list-header-option">암호화 알고리즘</th>
                     <td>
                         <select>
-                            <option value=""  selected>Sample1</option>
+                            <option value="" selected>Sample1</option>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
@@ -115,9 +116,9 @@
                         <input type="text">
                     </td>
                     <th class="list-header-option">PBX IP주소/도메인인</th>
-                   <td>
-                       <input type="text">
-                   </td>
+                    <td>
+                        <input type="text">
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -126,3 +127,4 @@
         <!-- search ▲ -->
         <!-- contents ▲ -->
     </div>
+</div>

@@ -1,196 +1,180 @@
 <link rel="stylesheet" href="../../../styles/layout/contents.css" xmlns="http://www.w3.org/1999/html">
 
 <div class="contents-layout" ng-controller="">
-<!-- title ▼ -->
-<div class="title-option">
-    　　　PROBE 등록 현황
-</div>
-<!-- title ▲ -->
-
-<!-- contents ▼ -->
-<div class="contents-background contents-center" style="padding: 5px">
-
-<!-- search ▼ -->
-<div>
-    <table class="table tb-list remove-margin contents-center">
-        <tbody>
-        <tr>
-            <th class="list-header-option text-center" style="padding: 18px 0">이용기관명</th>
-            <td><input type="text" ng-model="search.dutyname" class="form-control"></td>
-            <th class="list-header-option text-center" style="padding: 18px 0">PROBE 전화번호</th>
-            <td><input type="text" ng-model="search.memberid" class="form-control"></td>
-            <td rowspan="2" class="list-header-option">
-                <button class="btn btn-style" style="margin-top:30px" ng-click="trySearch()">검색</button>
-            </td>
-        </tr>
-        <tr>
-            <th class="list-header-option text-center" style="padding: 18px 0">PROBE 이름</th>
-            <td><input type="text" ng-model="search.start" class="form-control"></td>
-            <th class="list-header-option text-center" style="padding: 18px 0">사용 여부</th>
-            <td>
-                <select ng-model="inputData['useyn']" class="form-control">
-                    <option value="Y">사용함</option>
-                    <option value="N">사용안함</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <ul class="list-unstyled list-inline">
-                    <li class="pull-right" ng-init="state='Y'; add=false;">
-                        <img src="images/icon/probe_06.png" style="width:18px" alt="best"/>
-                        : 착신 통화중
-
-                    </li>
-                    <li class="pull-right" ng-init="state='Y'; add=false;">
-                        <img src="images/icon/probe_05.png" style="width:18px" alt="best"/>
-                        : 측정 수행중
-                    </li>
-
-                    <li class="pull-right" ng-init="state='Y'; add=false;">
-                        <img src="images/icon/probe_04.png" style="width:18px" alt="best"/>
-                        : 측정기능/스케줄러 중지
-                    </li>
-                    <li class="pull-right" ng-init="state='Y'; add=false;">
-                        <img src="images/icon/probe_03.png" style="width:18px" alt="best"/>
-                        :측정대기/진행
-                    </li>
-                    <li class="pull-right" ng-init="state='Y'; add=false;">
-                        <img src="images/icon/probe_02.png" style="width:18px" alt="best"/>
-                        :연결끊김
-                    </li>
-                    <li class="pull-right" ng-init="state='Y'; add=false;">
-                        <img src="images/icon/probe_01.png" style="width:18px" alt="best"/>
-                        :등록, 수신전용
-                    </li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-
-</div>
-<!-- search ▲ -->
-
-<!-- list ▼ -->
-<div style="margin-top:10px;">
-    <table class="table tb-list table-bordered list-option">
-        <thead>
-        <tr class="list-header-option">
-            <th>
-                이용기관명
-            </th>
-            <th>
-                PROBE 명
-            </th>
-            <th>
-                전화번호
-            </th>
-            <th>
-                담당자명
-            </th>
-            <th>
-                PROBE상태
-            </th>
-            <th>
-                스케쥴러 상태
-            </th>
-
-        </tr>
-        <tr>
-            <td>07822(김포도시철도3공구현장)</td>
-            <td>07822(김포도시철도3공구현장)</td>
-            <td>07822</td>
-            <td>.</td>
-            <td><img src="images/icon/probe_01.png" style="width:22px" alt="best"/></td>
-            <td><img src="images/icon/probe_03.png" style="width:22px" alt="best"/></td>
-        </tr>
-        </thead>
-        <tbody class="text-center list-contents-option">
-        <tr ng-repeat="item in filterItems= (items | orderBy:ordering())"
-            ng-if="currentPage*itemsPerPage <= $index && $index < (currentPage+1)*itemsPerPage">
-            <td>{{item['dutyname']}}</td>
-            <td>{{item['memberid']}}</td>
-            <td>{{item['useperiod']}}</td>
-            <td>{{item['comtel']}}</td>
-            <td>{{item['logincnt']}}회</td>
-            <td>{{item['logindate']}}</td>
-            <td>{{item['joindate']}}</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <div>
-        <ul class="list-unstyled list-inline pagenation-height text-center list-page" style="margin:4px 0">
-            <li>
-                <!-- ng-class="{disabled: currentPage < 10}" -->
-                <a href="#/probe/list">
-                    <span class="glyphicon glyphicon-backward"></span>
-                </a>
-            </li>
-            <li class="disabled">
-                <a href="#/probe/list">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-            </li>
-            <li class="active">
-                <a href="#/probe/list">
-                    1
-                </a>
-            </li>
-            <li>
-                <a href="#/probe/list">
-                    2
-                </a>
-            </li>
-            <li>
-                <a href="#/probe/list">
-                    3
-                </a>
-            </li>
-            <li>
-                <a href="#/probe/list">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </li>
-            <li>
-                <a href="#/probe/list">
-                    <span class="glyphicon glyphicon-forward"></span>
-                </a>
-            </li>
-        </ul>
+    <!-- title ▼ -->
+    <div class="title-option">
+        　　　PROBE 등록 현황
     </div>
-    <div class="row" style="margin-bottom: 10px">
-        <ul class="list-unstyled list-inline">
-            <li class="pull-right" ng-init="state='Y'; add=false;">
-                <button class="btn btn-style" ng-if="tabPage != '전체'" ng-click="action()">{{tabPage=='Y'?
-                    '사용안함':'사용함'}}
-                </button>
-                <button class="btn btn-style" ng-click="tryAdd();">사용 안함</button>
-                <button class="btn btn-style" ng-click="tryAdd();">추가</button>
-                <button class="btn btn-style" ng-click="tryAdd();">양식 받기</button>
-                <button class="btn btn-style" ng-click="tryAdd();">파일 선택</button>
-                <button class="btn btn-style" ng-click="tryAdd();">저 장</button>
+    <!-- title ▲ -->
 
-            </li>
-        </ul>
+    <!-- contents ▼ -->
+    <div class="contents-background contents-center" style="padding: 5px">
+
+        <!-- search ▼ -->
+        <div>
+            <table class="table tb-list remove-margin contents-center">
+                <tbody>
+                <tr>
+                    <th class="list-header-option text-center" style="padding: 18px 0">이용기관명</th>
+                    <td><input type="text" ng-model="search.dutyname" class="form-control"></td>
+                    <th class="list-header-option text-center" style="padding: 18px 0">PROBE 전화번호</th>
+                    <td><input type="text" ng-model="search.memberid" class="form-control"></td>
+                    <td rowspan="2" class="list-header-option">
+                        <button class="btn btn-style" style="margin-top:30px" ng-click="trySearch()">검색</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="list-header-option text-center" style="padding: 18px 0">PROBE 이름</th>
+                    <td><input type="text" ng-model="search.start" class="form-control"></td>
+                    <th class="list-header-option text-center" style="padding: 18px 0">사용 여부</th>
+                    <td>
+                        <select ng-model="inputData['useyn']" class="form-control">
+                            <option value="Y">사용함</option>
+                            <option value="N">사용안함</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <ul class="list-unstyled list-inline">
+                            <li class="pull-right" ng-init="state='Y'; add=false;">
+                                <img src="images/icon/probe_06.png" style="width:18px" alt="best"/>
+                                : 착신 통화중
+
+                            </li>
+                            <li class="pull-right" ng-init="state='Y'; add=false;">
+                                <img src="images/icon/probe_05.png" style="width:18px" alt="best"/>
+                                : 측정 수행중
+                            </li>
+
+                            <li class="pull-right" ng-init="state='Y'; add=false;">
+                                <img src="images/icon/probe_04.png" style="width:18px" alt="best"/>
+                                : 측정기능/스케줄러 중지
+                            </li>
+                            <li class="pull-right" ng-init="state='Y'; add=false;">
+                                <img src="images/icon/probe_03.png" style="width:18px" alt="best"/>
+                                :측정대기/진행
+                            </li>
+                            <li class="pull-right" ng-init="state='Y'; add=false;">
+                                <img src="images/icon/probe_02.png" style="width:18px" alt="best"/>
+                                :연결끊김
+                            </li>
+                            <li class="pull-right" ng-init="state='Y'; add=false;">
+                                <img src="images/icon/probe_01.png" style="width:18px" alt="best"/>
+                                :등록, 수신전용
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <!-- search ▲ -->
+
+        <!-- list ▼ -->
+        <div style="margin-top:5px;">
+            <table class="table tb-list table-bordered list-option">
+                <thead>
+                <tr class="list-header-option">
+                    <th>
+                        이용기관명
+                    </th>
+                    <th>
+                        PROBE 명
+                    </th>
+                    <th>
+                        전화번호
+                    </th>
+                    <th>
+                        담당자명
+                    </th>
+                    <th>
+                        PROBE상태
+                    </th>
+                    <th>
+                        스케쥴러 상태
+                    </th>
+
+                </tr>
+                <tr>
+                    <td>07822(김포도시철도3공구현장)</td>
+                    <td>07822(김포도시철도3공구현장)</td>
+                    <td>07822</td>
+                    <td>.</td>
+                    <td><img src="images/icon/probe_01.png" style="width:22px" alt="best"/></td>
+                    <td><img src="images/icon/probe_03.png" style="width:22px" alt="best"/></td>
+                </tr>
+                </thead>
+            </table>
+
+            <div class="row clearfix remove-margin remove-padding">
+                <div class="col-md-4">
+                    <button class="btn btn-style pull-left" ng-click="tryAdd();">사용 안함</button>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled list-inline pagenation-height text-center list-page">
+                        <li>
+                            <!-- ng-class="{disabled: currentPage < 10}" -->
+                            <a href="#/probe/list">
+                                <span class="glyphicon glyphicon-backward"></span>
+                            </a>
+                        </li>
+                        <li class="disabled">
+                            <a href="#/probe/list">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#/probe/list">
+                                1
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/probe/list">
+                                2
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/probe/list">
+                                3
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/probe/list">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/probe/list">
+                                <span class="glyphicon glyphicon-forward"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <button class="btn btn-style pull-right" ng-click="tryAdd();">추가</button>
+                    <button class="btn btn-style pull-right" ng-click="tryAdd();">양식 받기</button>
+                    <button class="btn btn-style pull-right" ng-click="tryAdd();">파일 선택</button>
+                    <button class="btn btn-style pull-right" ng-click="tryAdd();">저 장</button>
+                </div>
+            </div>
+            <!-- list ▲ -->
+        </div>
     </div>
-    <!-- list ▲ -->
 
 </div>
 
-<div class="title-option">
-    　　　PROBE 추가
-</div>
-<!-- contents ▼ -->
-<div class="contents-background contents-center" ng-controller="">
-
-    <!-- search ▼ -->
-    <div>
-        <table class="table tb-list remove-margin contents-center table-left">
+<div class="contents-layout" style="margin-top:0;">
+    <div class="title-option">
+        　　　PROBE 추가
+    </div>
+    <!-- contents ▼ -->
+    <div class="contents-background contents-center" style="padding:5px ; padding-bottom: 1px">
+        <table class="table tb-list remove-margin contents-center table-left list-option">
             <tbody>
             <tr>
-
-                <td colspan="3">
+                <td colspan="4">
                     <button type="button" class="btn btn-style">
                         기본값으로
                     </button>
@@ -200,38 +184,35 @@
                         , 'width=800, height=250, toolbar=no, menubar=no, scrollbars=no, resizable=yes')">
                         기본값 설정
                     </button>
-
-
                 </td>
-
             </tr>
             <tr>
                 <th class="list-header-option">PROBE 전화번호</th>
                 <td colspan="3">
-                    <input type="text">-
-                    <input type="text">
-                    <button class="btn-default">중복확인</button>
+                    <div>
+                        <input type="text" class="form-control" style="float:left; width: 39%">
+                        <span style="float:left; margin: 0 10px; padding-top: 8px">─</span>
+                        <input type="text" class="form-control" style="float:left; width: 39%">
+                        <button class="btn btn-style" style="float:left; width:15%; margin-left:10px; margin-top:1px">중복확인</button>
+                    </div>
                 </td>
 
             </tr>
             <tr>
                 <th class="list-header-option">PROBE 외부전화 호출 번호</th>
-                <td colspan="3">
-                    <input type="text">
+                <td>
+                    <input type="text" class="form-control">
                 </td>
-
-            </tr>
-            <tr>
                 <th class="list-header-option">PROBE 이름</th>
-                <td colspan="3">
-                    <input type="text">
+                <td>
+                    <input type="text" class="form-control">
                 </td>
 
             </tr>
             <tr>
                 <th class="list-header-option">이용기관명</th>
                 <td colspan="3">
-                    <select>
+                    <select class="form-control">
                         <option value="" selected>기간선택</option>
                         <option value=""></option>
                         <option value=""></option>
@@ -245,11 +226,11 @@
             <tr>
                 <th class="list-header-option">기관담당자명</th>
                 <td>
-                    <input type="text">
+                    <input type="text" class="form-control">
                 </td>
                 <th class="list-header-option">기관담당자 전화번호</th>
                 <td>
-                    <input type="text">
+                    <input type="text" class="form-control">
                 </td>
 
             </tr>
@@ -262,14 +243,22 @@
             </tr>
             <tr>
                 <th class="list-header-option">코덱유형설정</th>
-                <td colspan="3"></td>
-
+                <td colspan="3">
+                    <select class="form-control">
+                        <option value="" selected>유형 설정</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <th class="list-header-option">오디오 샘플파일</th>
                 <td>
-                    <select>
-                        <option value="" selected>유형 설정</option>
+                    <select class="form-control">
+                        <option value="" selected>Sample1</option>
                         <option value=""></option>
                         <option value=""></option>
                         <option value=""></option>
@@ -279,39 +268,35 @@
                 </td>
                 <th class="list-header-option">암호화 알고리즘</th>
                 <td>
-                    <select>
-                        <option value="" selected>Sample1</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
+                    <input type="radio">AES
+                    <input type="radio">ARIA
                 </td>
             </tr>
 
             <tr>
                 <th class="list-header-option">Media 암호화 사용여부</th>
                 <td>
-                    <input type="text">
+                    <input type="radio">사용함
+                    <input type="radio">사용안함
                 </td>
                 <th class="list-header-option">Signal 암호화 사용여부</th>
                 <td>
-                    <input type="text">
+                    <input type="radio">사용함
+                    <input type="radio">사용안함
                 </td>
             </tr>
             <tr>
                 <th class="list-header-option">통화측정시간(초)</th>
                 <td>
-                    <input type="text">
+                    <input type="text" class="form-control">
                 </td>
                 <th class="list-header-option">PBX IP주소/도메인인</th>
                 <td>
-                    <input type="text">
+                    <input type="text" class="form-control">
                 </td>
             </tr>
             </tbody>
         </table>
     </div>
-    <!-- contents ▲ -->
 </div>
+<!-- contents ▲ -->
