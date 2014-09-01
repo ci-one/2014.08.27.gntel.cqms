@@ -7,12 +7,12 @@
 @side-font-color : #222;
 
 @side-menu-color: @side-middle-color;
-@gradient-color:lighten(@side-middle-color,10%);
+@gradient-color:lighten(@btn-bg-color,30%);
 
 //테이블 색상
 
 @th-color : #eee;   //th 색상
-@th-bot-color : @blue;  // 밑줄 색상
+@th-bot-color : #4062ac;  // 밑줄 색상
 @th-font:@grey;
 
 //버튼  색상
@@ -20,11 +20,13 @@
 @btn-bg-color: #47a447;
 @btn-border-color: darken(#47a447,10%);
 
-@sub-title:@blue;
+@sub-title:#4062ac ;
 @bg-title:@basic-bg;
+
 
 */
 /*
+
 
 //블루컨셉
 //사이드 메뉴 색상
@@ -133,16 +135,16 @@
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc578), color-stop(100%, #fb9d23));
   /* Chrome,Safari4+ */
 
-  background: -webkit-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -webkit-linear-gradient(top, #e95c5c 0%, #6f6f6f 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -o-linear-gradient(top, #e95c5c 0%, #6f6f6f 100%);
   /* Opera 11.10+ */
 
-  background: -ms-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -ms-linear-gradient(top, #e95c5c 0%, #6f6f6f 100%);
   /* IE10+ */
 
-  background: linear-gradient(to bottom, #898989 0%, #6f6f6f 100%);
+  background: linear-gradient(to bottom, #e95c5c 0%, #6f6f6f 100%);
   /* W3C */
 
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffc578', endColorstr='#fb9d23', GradientType=0);
@@ -173,16 +175,16 @@
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc578), color-stop(100%, #fb9d23));
   /* Chrome,Safari4+ */
 
-  background: -webkit-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -webkit-linear-gradient(top, #e95c5c 0%, #6f6f6f 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -o-linear-gradient(top, #e95c5c 0%, #6f6f6f 100%);
   /* Opera 11.10+ */
 
-  background: -ms-linear-gradient(top, #898989 0%, #6f6f6f 100%);
+  background: -ms-linear-gradient(top, #e95c5c 0%, #6f6f6f 100%);
   /* IE10+ */
 
-  background: linear-gradient(to bottom, #898989 0%, #6f6f6f 100%);
+  background: linear-gradient(to bottom, #e95c5c 0%, #6f6f6f 100%);
   /* W3C */
 
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffc578', endColorstr='#fb9d23', GradientType=0);

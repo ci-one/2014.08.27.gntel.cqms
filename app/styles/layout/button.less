@@ -1,6 +1,41 @@
+.pills {
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    > a {
+
+    }
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border:0;
+        background-color: @btn-bg-color;
+      }
+    }
+  }
+}
 
 .btn-style{
   .btn-st1(@btn-bg-color,@gradient-color);
+}
+
+.btn-style-sub{
+  .btn-st1(@btn-bg-color,@gradient-color);
+  padding: 4px 8px;
+  margin-top: 3px;
+}
+
+.btn-base-sub{
+  .btn-base;
+  padding:4px 8px;
+  margin-top: 3px;
 }
 .btn-base{
   .button;

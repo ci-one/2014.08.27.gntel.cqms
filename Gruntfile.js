@@ -43,7 +43,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
-        url: 'http://192.168.1.16:<%= express.options.port %>'
+        url: 'http://192.168.1.13:<%= express.options.port %>'
       }
     },
     watch: {

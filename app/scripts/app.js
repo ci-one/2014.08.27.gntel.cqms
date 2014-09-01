@@ -24,15 +24,17 @@ angular.module('gntelCqmsApp', [
             // 추가:김민정
 
             // 추가:심정미
+
             .when('/quality/weather_chart', {
                 //품질기상도
                 redirectTo: '/quality/weather_chart/base'
             })
+
             .when('/quality/weather_chart/base', {
                 //품질기상도
                 templateUrl: 'views/contents/052_S_2100_quality.weather.chart.html'
             })
-            .when('/quality/weather_chart/red', {
+    /*       .when('/quality/weather_chart/red', {
                 //품질기상도
                 templateUrl: 'views/contents/052_S_2100_quality.weather.chart_red.html'
             })
@@ -41,6 +43,7 @@ angular.module('gntelCqmsApp', [
                 templateUrl: 'views/contents/052_S_2100_quality.weather.chart_blue.html'
             })
             // 추가:심정미
+*/
 
             //추가:채영범
             .when('/probe/list', {
